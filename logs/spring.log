@@ -1,0 +1,760 @@
+2022-03-18 17:38:02.707  INFO 16499 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.13
+	Lavaplayer      1.3.96-original
+
+2022-03-18 17:38:02.772  INFO 16499 --- [main] lavalink.server.Launcher                 : Starting Launcher on binoy638-Linux with PID 16499 (/media/binoy638/Projects/Projects/typescript/udility-v2/Lavalink.jar started by binoy638 in /media/binoy638/Projects/Projects/typescript/udility-v2)
+2022-03-18 17:38:02.772  INFO 16499 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-03-18 17:38:02.839  WARN 16499 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-03-18 17:38:03.431  WARN 16499 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-18 17:38:03.446  INFO 16499 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-18 17:38:03.446  INFO 16499 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 644 ms
+2022-03-18 17:38:03.644  WARN 16499 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-03-18 17:38:03.817  INFO 16499 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-03-18 17:38:03.940  INFO 16499 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-03-18 17:38:03.940  INFO 16499 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-03-18 17:38:03.943  INFO 16499 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-03-18 17:38:03.945  INFO 16499 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-03-18 17:38:04.099  INFO 16499 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-18 17:38:04.284  INFO 16499 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-18 17:38:04.290  INFO 16499 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-18 17:38:04.327  INFO 16499 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-03-18 17:38:04.330  INFO 16499 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.935 seconds (JVM running for 2.263)
+2022-03-18 17:38:04.331  INFO 16499 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-03-18 17:38:17.583  INFO 16499 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-18 17:38:17.583  INFO 16499 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-18 17:38:17.588  INFO 16499 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-03-18 17:38:17.602  INFO 16499 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36594
+2022-03-18 17:38:17.637  INFO 16499 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:39:28.346  INFO 16499 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36594 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:39:28.347  INFO 16499 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:40:12.433  INFO 16499 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36660
+2022-03-18 17:40:12.435  INFO 16499 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:40:12.441  INFO 16499 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36660 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:40:12.442  INFO 16499 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:41:04.792  INFO 16499 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36700
+2022-03-18 17:41:04.795  INFO 16499 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:41:18.531  INFO 16499 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36700 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:41:18.532  INFO 16499 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:41:20.950  INFO 16499 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36716
+2022-03-18 17:41:20.952  INFO 16499 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:42:42.484  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36716 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:42:42.484  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:42:44.800  INFO 16499 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36764
+2022-03-18 17:42:44.802  INFO 16499 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:43:04.648  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36764 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:43:04.648  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:43:07.250  INFO 16499 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36780
+2022-03-18 17:43:07.252  INFO 16499 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:43:31.851  INFO 16499 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36780 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:43:31.851  INFO 16499 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:45:32.874  INFO 16499 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36830
+2022-03-18 17:45:32.876  INFO 16499 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:46:30.664  INFO 16499 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36830 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:46:30.664  INFO 16499 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:46:33.278  INFO 16499 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36872
+2022-03-18 17:46:33.281  INFO 16499 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:47:16.955  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36872 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:47:16.956  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:47:19.251  INFO 16499 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36902
+2022-03-18 17:47:19.253  INFO 16499 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:47:22.413  INFO 16499 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36902 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:47:22.414  INFO 16499 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:47:24.849  INFO 16499 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36920
+2022-03-18 17:47:24.851  INFO 16499 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:47:28.625  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36920 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:47:28.625  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:48:36.789  INFO 16499 --- [XNIO-1 task-11] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36952
+2022-03-18 17:48:36.791  INFO 16499 --- [XNIO-1 task-11] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:48:58.794  INFO 16499 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36952 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:48:58.795  INFO 16499 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:49:01.103  INFO 16499 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36976
+2022-03-18 17:49:01.105  INFO 16499 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:51:08.818  INFO 16499 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36976 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:51:08.818  INFO 16499 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:51:11.409  INFO 16499 --- [XNIO-1 task-13] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37006
+2022-03-18 17:51:11.412  INFO 16499 --- [XNIO-1 task-13] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:51:15.284  INFO 16499 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37006 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:51:15.285  INFO 16499 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:53:05.120  INFO 16499 --- [XNIO-1 task-14] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37038
+2022-03-18 17:53:05.123  INFO 16499 --- [XNIO-1 task-14] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:53:10.444  INFO 16499 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"6e0788dae8d3cfb1592d5ee5a04e486e","event":{"token":"72a9bdf4d7ab4da8","guild_id":"757216229508513833","endpoint":"india9473.discord.media:443"}}
+2022-03-18 17:58:59.509  INFO 16499 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37038 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:58:59.510  INFO 16499 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:59:02.237  INFO 16499 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37206
+2022-03-18 17:59:02.239  INFO 16499 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:59:07.196  INFO 16499 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37206 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:59:07.196  INFO 16499 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:59:09.723  INFO 16499 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37220
+2022-03-18 17:59:09.725  INFO 16499 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:59:16.443  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37220 -- CloseStatus[code=1006, reason=]
+2022-03-18 17:59:16.444  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 17:59:32.010  INFO 16499 --- [XNIO-1 task-17] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37244
+2022-03-18 17:59:32.012  INFO 16499 --- [XNIO-1 task-17] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 17:59:36.402  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"b918962a9230fa42b4b60e796a36010e","event":{"token":"72a9bdf4d7ab4da8","guild_id":"757216229508513833","endpoint":"india9473.discord.media:443"}}
+2022-03-18 18:01:11.660  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37244 -- CloseStatus[code=1006, reason=]
+2022-03-18 18:01:11.660  INFO 16499 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 18:01:11.989  INFO 16499 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-18 18:01:11.990  INFO 16499 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-03-18 18:01:11.992  INFO 16499 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-18 19:07:45.936  INFO 8034 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.13
+	Lavaplayer      1.3.96-original
+
+2022-03-18 19:07:46.044  INFO 8034 --- [main] lavalink.server.Launcher                 : Starting Launcher on binoy638-Linux with PID 8034 (/media/binoy638/Projects/Projects/typescript/udility-v2/Lavalink.jar started by binoy638 in /media/binoy638/Projects/Projects/typescript/udility-v2)
+2022-03-18 19:07:46.044  INFO 8034 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-03-18 19:07:46.097  WARN 8034 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-03-18 19:07:47.234  WARN 8034 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-18 19:07:47.257  INFO 8034 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-18 19:07:47.257  INFO 8034 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1183 ms
+2022-03-18 19:07:47.596  WARN 8034 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-03-18 19:07:47.936  INFO 8034 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-03-18 19:07:48.130  INFO 8034 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-03-18 19:07:48.131  INFO 8034 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-03-18 19:07:48.143  INFO 8034 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-03-18 19:07:48.147  INFO 8034 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-03-18 19:07:48.335  INFO 8034 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-18 19:07:48.534  INFO 8034 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-18 19:07:48.542  INFO 8034 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-18 19:07:48.599  INFO 8034 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-03-18 19:07:48.602  INFO 8034 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.635 seconds (JVM running for 4.681)
+2022-03-18 19:07:48.603  INFO 8034 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-03-18 19:08:08.198  INFO 8034 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-18 19:08:08.198  INFO 8034 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-18 19:08:08.202  INFO 8034 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-18 19:08:08.223  INFO 8034 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35424
+2022-03-18 19:08:08.283  INFO 8034 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:08:16.406  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35424 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:08:16.407  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:11:04.453  INFO 8034 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35508
+2022-03-18 19:11:04.455  INFO 8034 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:11:25.116  INFO 8034 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:11:26.313  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:11:27.106  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAngIAOENsZWFuIEJhbmRpdCAtIEhpZ2hlciAoZmVhdC4gaWFubiBkaW9yKSBbT2ZmaWNpYWwgVmlkZW9dAAxDbGVhbiBCYW5kaXQAAAAAAAND8AALUnFzZmE1QXQyMTQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1ScXNmYTVBdDIxNAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 19:11:27.626  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"cc5324b86bfc548d925120530061a4fa","event":{"token":"61cc0f6c5a7bcee5","guild_id":"757216229508513833","endpoint":"india10011.discord.media:443"}}
+2022-03-18 19:12:37.995  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35508 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:12:37.995  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 19:13:10.732  INFO 8034 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35560
+2022-03-18 19:13:10.733  INFO 8034 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:13:20.252  INFO 8034 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"99142b629afe1386e9b9755b99081dd9","event":{"token":"61cc0f6c5a7bcee5","guild_id":"757216229508513833","endpoint":"india10011.discord.media:443"}}
+2022-03-18 19:14:21.037  INFO 8034 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35560 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:14:21.037  INFO 8034 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:14:23.504  INFO 8034 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35596
+2022-03-18 19:14:23.506  INFO 8034 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:14:43.524  INFO 8034 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35596 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:14:43.525  INFO 8034 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:15:37.610  INFO 8034 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35628
+2022-03-18 19:15:37.612  INFO 8034 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:15:48.744  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35628 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:15:48.744  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:15:51.290  INFO 8034 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35642
+2022-03-18 19:15:51.291  INFO 8034 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:15:56.106  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35642 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:15:56.106  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:16:30.640  INFO 8034 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35666
+2022-03-18 19:16:30.642  INFO 8034 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:16:35.075  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35666 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:16:35.076  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:17:22.168  INFO 8034 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35718
+2022-03-18 19:17:22.170  INFO 8034 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:17:24.953  INFO 8034 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:17:26.019  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:17:26.036  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35718 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:17:26.037  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:17:58.545  INFO 8034 --- [XNIO-1 task-13] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35746
+2022-03-18 19:17:58.548  INFO 8034 --- [XNIO-1 task-13] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:18:00.725  INFO 8034 --- [XNIO-1 task-14] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:18:01.516  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:18:01.980  INFO 8034 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35746 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:18:01.981  INFO 8034 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:19:48.971  INFO 8034 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35802
+2022-03-18 19:19:48.973  INFO 8034 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:19:53.116  INFO 8034 --- [XNIO-1 task-17] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:19:53.680  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:19:54.428  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35802 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:19:54.429  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:20:20.377  INFO 8034 --- [XNIO-1 task-19] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35826
+2022-03-18 19:20:20.379  INFO 8034 --- [XNIO-1 task-19] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:20:24.046  INFO 8034 --- [XNIO-1 task-20] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:20:24.682  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:20:25.199  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35826 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:20:25.199  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:20:44.866  INFO 8034 --- [XNIO-1 task-22] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35846
+2022-03-18 19:20:44.868  INFO 8034 --- [XNIO-1 task-22] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:20:47.068  INFO 8034 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:20:47.674  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:20:48.307  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"f3039d84122eae5699edcabbc1ccce25","event":{"token":"fa8c1a786f0bdbda","guild_id":"757216229508513833","endpoint":"india10011.discord.media:443"}}
+2022-03-18 19:20:48.428  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35846 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:20:48.429  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:21:17.152  INFO 8034 --- [XNIO-1 task-25] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35876
+2022-03-18 19:21:17.154  INFO 8034 --- [XNIO-1 task-25] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:21:19.311  INFO 8034 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:21:19.911  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:21:20.399  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35876 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:21:20.399  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:23:35.589  INFO 8034 --- [XNIO-1 task-28] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35920
+2022-03-18 19:23:35.591  INFO 8034 --- [XNIO-1 task-28] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:23:49.344  INFO 8034 --- [XNIO-1 task-29] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:23:49.915  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:23:50.387  INFO 8034 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35920 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:23:50.388  INFO 8034 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:24:16.995  INFO 8034 --- [XNIO-1 task-31] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35966
+2022-03-18 19:24:16.998  INFO 8034 --- [XNIO-1 task-31] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:24:19.973  INFO 8034 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:24:20.627  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:24:21.205  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35966 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:24:21.206  INFO 8034 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:24:35.608  INFO 8034 --- [XNIO-1 task-34] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:35984
+2022-03-18 19:24:35.611  INFO 8034 --- [XNIO-1 task-34] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:24:46.854  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:35984 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:24:46.854  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:24:49.288  INFO 8034 --- [XNIO-1 task-35] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36000
+2022-03-18 19:24:49.290  INFO 8034 --- [XNIO-1 task-35] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:24:53.318  INFO 8034 --- [XNIO-1 task-36] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:24:54.326  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:24:54.816  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAngIAOENsZWFuIEJhbmRpdCAtIEhpZ2hlciAoZmVhdC4gaWFubiBkaW9yKSBbT2ZmaWNpYWwgVmlkZW9dAAxDbGVhbiBCYW5kaXQAAAAAAAND8AALUnFzZmE1QXQyMTQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1ScXNmYTVBdDIxNAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 19:24:54.823  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36000 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:24:54.823  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 19:25:39.207  INFO 8034 --- [XNIO-1 task-38] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36036
+2022-03-18 19:25:39.208  INFO 8034 --- [XNIO-1 task-38] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:25:42.147  INFO 8034 --- [XNIO-1 task-39] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:25:42.714  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:25:43.245  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAngIAOENsZWFuIEJhbmRpdCAtIEhpZ2hlciAoZmVhdC4gaWFubiBkaW9yKSBbT2ZmaWNpYWwgVmlkZW9dAAxDbGVhbiBCYW5kaXQAAAAAAAND8AALUnFzZmE1QXQyMTQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1ScXNmYTVBdDIxNAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 19:25:43.330  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"65e09cf59289fd8e382afeb72ff57eb2","event":{"token":"41d6975b9f810ea2","guild_id":"757216229508513833","endpoint":"india10011.discord.media:443"}}
+2022-03-18 19:30:17.426  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36036 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:30:17.427  INFO 8034 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:30:19.794  INFO 8034 --- [XNIO-1 task-41] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36128
+2022-03-18 19:30:19.796  INFO 8034 --- [XNIO-1 task-41] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:30:38.031  INFO 8034 --- [XNIO-1 task-42] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:30:38.978  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:30:39.592  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAngIAOENsZWFuIEJhbmRpdCAtIEhpZ2hlciAoZmVhdC4gaWFubiBkaW9yKSBbT2ZmaWNpYWwgVmlkZW9dAAxDbGVhbiBCYW5kaXQAAAAAAAND8AALUnFzZmE1QXQyMTQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1ScXNmYTVBdDIxNAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 19:30:40.268  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"c81deaf20ac94cd3aeeab968ff663186","event":{"token":"41d6975b9f810ea2","guild_id":"757216229508513833","endpoint":"india10011.discord.media:443"}}
+2022-03-18 19:30:58.848  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36128 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:30:58.849  INFO 8034 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 19:31:31.992  INFO 8034 --- [XNIO-1 task-44] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36174
+2022-03-18 19:31:31.993  INFO 8034 --- [XNIO-1 task-44] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:31:42.957  INFO 8034 --- [XNIO-1 task-45] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 19:31:43.996  INFO 8034 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 19:31:44.464  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAngIAOENsZWFuIEJhbmRpdCAtIEhpZ2hlciAoZmVhdC4gaWFubiBkaW9yKSBbT2ZmaWNpYWwgVmlkZW9dAAxDbGVhbiBCYW5kaXQAAAAAAAND8AALUnFzZmE1QXQyMTQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1ScXNmYTVBdDIxNAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 19:31:45.335  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"2a458043c384babd2bbfd3eb4ce34093","event":{"token":"41d6975b9f810ea2","guild_id":"757216229508513833","endpoint":"india10011.discord.media:443"}}
+2022-03-18 19:31:50.201  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"757216229508513833"}
+2022-03-18 19:34:34.352  INFO 8034 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-18 19:34:34.352  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36174 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:34:34.353  INFO 8034 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:34:34.353  INFO 8034 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-03-18 19:34:34.356  INFO 8034 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-18 19:49:36.988  INFO 16036 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.13
+	Lavaplayer      1.3.96-original
+
+2022-03-18 19:49:37.060  INFO 16036 --- [main] lavalink.server.Launcher                 : Starting Launcher on binoy638-Linux with PID 16036 (/media/binoy638/Projects/Projects/typescript/udility-v2/Lavalink.jar started by binoy638 in /media/binoy638/Projects/Projects/typescript/udility-v2)
+2022-03-18 19:49:37.060  INFO 16036 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-03-18 19:49:37.125  WARN 16036 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-03-18 19:49:37.795  WARN 16036 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-18 19:49:37.811  INFO 16036 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-18 19:49:37.811  INFO 16036 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 721 ms
+2022-03-18 19:49:38.024  WARN 16036 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-03-18 19:49:38.200  INFO 16036 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-03-18 19:49:38.333  INFO 16036 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-03-18 19:49:38.333  INFO 16036 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-03-18 19:49:38.336  INFO 16036 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-03-18 19:49:38.338  INFO 16036 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-03-18 19:49:38.511  INFO 16036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-18 19:49:38.712  INFO 16036 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-18 19:49:38.720  INFO 16036 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-18 19:49:38.759  INFO 16036 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-03-18 19:49:38.762  INFO 16036 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.061 seconds (JVM running for 2.371)
+2022-03-18 19:49:38.763  INFO 16036 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-03-18 19:49:43.508  INFO 16036 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-18 19:49:43.508  INFO 16036 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-18 19:49:43.512  INFO 16036 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-18 19:49:43.525  INFO 16036 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36500
+2022-03-18 19:49:43.561  INFO 16036 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:51:13.461  INFO 16036 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36500 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:51:13.461  INFO 16036 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:51:15.752  INFO 16036 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36548
+2022-03-18 19:51:15.754  INFO 16036 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:55:33.084  INFO 16036 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36548 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:55:33.084  INFO 16036 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:55:35.489  INFO 16036 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36656
+2022-03-18 19:55:35.491  INFO 16036 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:55:36.262  INFO 16036 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36656 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:55:36.263  INFO 16036 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:56:09.395  INFO 16036 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36688
+2022-03-18 19:56:09.397  INFO 16036 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:56:10.192  INFO 16036 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36688 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:56:10.193  INFO 16036 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:56:19.935  INFO 16036 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:36706
+2022-03-18 19:56:19.937  INFO 16036 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 19:57:12.716  INFO 16036 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:36706 -- CloseStatus[code=1006, reason=]
+2022-03-18 19:57:12.716  INFO 16036 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 19:57:13.011  INFO 16036 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-18 19:57:13.012  INFO 16036 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-03-18 19:57:13.014  INFO 16036 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-18 20:27:17.313  INFO 19655 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.13
+	Lavaplayer      1.3.96-original
+
+2022-03-18 20:27:17.370  INFO 19655 --- [main] lavalink.server.Launcher                 : Starting Launcher on binoy638-Linux with PID 19655 (/media/binoy638/Projects/Projects/typescript/udility-v2/Lavalink.jar started by binoy638 in /media/binoy638/Projects/Projects/typescript/udility-v2)
+2022-03-18 20:27:17.370  INFO 19655 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-03-18 20:27:17.428  WARN 19655 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-03-18 20:27:18.057  WARN 19655 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-18 20:27:18.073  INFO 19655 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-18 20:27:18.073  INFO 19655 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 679 ms
+2022-03-18 20:27:18.277  WARN 19655 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-03-18 20:27:18.465  INFO 19655 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-03-18 20:27:18.593  INFO 19655 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-03-18 20:27:18.594  INFO 19655 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-03-18 20:27:18.597  INFO 19655 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-03-18 20:27:18.600  INFO 19655 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-03-18 20:27:18.778  INFO 19655 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-18 20:27:18.954  INFO 19655 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-18 20:27:18.960  INFO 19655 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-18 20:27:19.006  INFO 19655 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-03-18 20:27:19.009  INFO 19655 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.96 seconds (JVM running for 2.251)
+2022-03-18 20:27:19.010  INFO 19655 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-03-18 20:27:23.709  INFO 19655 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-18 20:27:23.709  INFO 19655 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-18 20:27:23.713  INFO 19655 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-18 20:27:23.725  INFO 19655 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37012
+2022-03-18 20:27:23.762  INFO 19655 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:27:26.381  INFO 19655 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 20:27:27.429  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 20:27:50.064  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37012 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:27:50.064  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:27:52.424  INFO 19655 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37032
+2022-03-18 20:27:52.427  INFO 19655 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:27:59.130  INFO 19655 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:higher"
+2022-03-18 20:27:59.884  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: higher
+2022-03-18 20:32:57.970  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37032 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:32:57.971  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:33:00.387  INFO 19655 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37164
+2022-03-18 20:33:00.389  INFO 19655 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:37:45.720  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37164 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:37:45.721  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:37:48.313  INFO 19655 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37270
+2022-03-18 20:37:48.315  INFO 19655 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:48:32.231  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37270 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:48:32.231  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:48:34.701  INFO 19655 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37554
+2022-03-18 20:48:34.703  INFO 19655 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:50:05.311  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37554 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:50:05.311  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:50:07.895  INFO 19655 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37604
+2022-03-18 20:50:07.897  INFO 19655 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:50:29.870  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37604 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:50:29.871  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:50:32.174  INFO 19655 --- [XNIO-1 task-11] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37622
+2022-03-18 20:50:32.177  INFO 19655 --- [XNIO-1 task-11] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:50:32.185  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37622 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:50:32.186  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:50:37.769  INFO 19655 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37636
+2022-03-18 20:50:37.771  INFO 19655 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:53:05.954  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37636 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:53:05.955  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:53:08.290  INFO 19655 --- [XNIO-1 task-13] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37694
+2022-03-18 20:53:08.293  INFO 19655 --- [XNIO-1 task-13] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:53:18.299  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37694 -- CloseStatus[code=1006, reason=]
+2022-03-18 20:53:18.299  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 20:53:20.726  INFO 19655 --- [XNIO-1 task-14] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:37712
+2022-03-18 20:53:20.728  INFO 19655 --- [XNIO-1 task-14] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 20:53:25.196  INFO 19655 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:River (feat. Ed Sheeran) Eminem"
+2022-03-18 20:53:25.196  INFO 19655 --- [XNIO-1 task-17] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Walk On Water (feat. Beyoncé) Eminem"
+2022-03-18 20:53:25.196  INFO 19655 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me (Intro) Eminem"
+2022-03-18 20:53:25.197  INFO 19655 --- [XNIO-1 task-24] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me Eminem"
+2022-03-18 20:53:25.196  INFO 19655 --- [XNIO-1 task-15] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Believe Eminem"
+2022-03-18 20:53:25.197  INFO 19655 --- [XNIO-1 task-22] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Revival (Interlude) Eminem"
+2022-03-18 20:53:25.197  INFO 19655 --- [XNIO-1 task-27] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Need Me (feat. Pink) Eminem"
+2022-03-18 20:53:25.197  INFO 19655 --- [XNIO-1 task-25] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:In Your Head Eminem"
+2022-03-18 20:53:25.197  INFO 19655 --- [XNIO-1 task-28] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Nowhere Fast (feat. Kehlani) Eminem"
+2022-03-18 20:53:25.196  INFO 19655 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Tragic Endings (feat. Skylar Grey) Eminem"
+2022-03-18 20:53:25.198  INFO 19655 --- [XNIO-1 task-21] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Framed Eminem"
+2022-03-18 20:53:25.196  INFO 19655 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Untouchable Eminem"
+2022-03-18 20:53:25.196  INFO 19655 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Bad Husband (feat. X Ambassadors) Eminem"
+2022-03-18 20:53:25.203  INFO 19655 --- [XNIO-1 task-20] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Chloraseptic (feat. Phresher) Eminem"
+2022-03-18 20:53:25.203  INFO 19655 --- [XNIO-1 task-30] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Heat Eminem"
+2022-03-18 20:53:25.203  INFO 19655 --- [XNIO-1 task-29] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Arose Eminem"
+2022-03-18 20:53:25.204  INFO 19655 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Like Home (feat. Alicia Keys) Eminem"
+2022-03-18 20:53:25.204  INFO 19655 --- [XNIO-1 task-33] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Offended Eminem"
+2022-03-18 20:53:25.206  INFO 19655 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Castle Eminem"
+2022-03-18 20:53:26.150  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-8] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Nowhere Fast (feat. Kehlani) Eminem
+2022-03-18 20:53:26.187  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-6] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Need Me (feat. Pink) Eminem
+2022-03-18 20:53:26.188  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-4] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Believe Eminem
+2022-03-18 20:53:26.229  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-10] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Tragic Endings (feat. Skylar Grey) Eminem
+2022-03-18 20:53:26.258  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: River (feat. Ed Sheeran) Eminem
+2022-03-18 20:53:26.264  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-2] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me (Intro) Eminem
+2022-03-18 20:53:26.269  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-5] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Revival (Interlude) Eminem
+2022-03-18 20:53:26.288  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-9] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Framed Eminem
+2022-03-18 20:53:26.370  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-7] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: In Your Head Eminem
+2022-03-18 20:53:26.681  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-3] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me Eminem
+2022-03-18 20:53:26.804  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-4] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Bad Husband (feat. X Ambassadors) Eminem
+2022-03-18 20:53:26.912  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-8] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Walk On Water (feat. Beyoncé) Eminem
+2022-03-18 20:53:26.938  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-10] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Chloraseptic (feat. Phresher) Eminem
+2022-03-18 20:53:26.952  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-7] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Castle Eminem
+2022-03-18 20:53:26.992  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Heat Eminem
+2022-03-18 20:53:27.009  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-2] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Arose Eminem
+2022-03-18 20:53:27.031  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-6] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Untouchable Eminem
+2022-03-18 20:53:27.035  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-5] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Like Home (feat. Alicia Keys) Eminem
+2022-03-18 20:53:27.204  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-9] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Offended Eminem
+2022-03-18 21:09:33.275  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:37712 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:09:33.276  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:09:35.979  INFO 19655 --- [XNIO-1 task-53] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38030
+2022-03-18 21:09:35.980  INFO 19655 --- [XNIO-1 task-53] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:09:55.871  INFO 19655 --- [XNIO-1 task-54] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:bad liar"
+2022-03-18 21:09:56.729  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-9] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: bad liar
+2022-03-18 21:09:57.229  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAggIAGkltYWdpbmUgRHJhZ29ucyAtIEJhZCBMaWFyAA5JbWFnaW5lRHJhZ29ucwAAAAAABFVgAAtJLVFmUFV6MWVzOAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUktUWZQVXoxZXM4AAd5b3V0dWJlAAAAAAAAAAA=","guildId":"757216229508513833"}
+2022-03-18 21:09:57.350  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"a685197ce032deeba69b3c5083862584","event":{"token":"e9a03d63f8f6c0a3","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:10:41.615  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38030 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:10:41.616  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 21:10:43.991  INFO 19655 --- [XNIO-1 task-56] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38066
+2022-03-18 21:10:43.993  INFO 19655 --- [XNIO-1 task-56] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:11:48.849  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38066 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:11:48.849  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:11:51.433  INFO 19655 --- [XNIO-1 task-57] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38082
+2022-03-18 21:11:51.435  INFO 19655 --- [XNIO-1 task-57] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:14:04.192  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38082 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:14:04.192  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:14:06.835  INFO 19655 --- [XNIO-1 task-58] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38164
+2022-03-18 21:14:06.838  INFO 19655 --- [XNIO-1 task-58] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:14:22.355  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38164 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:14:22.355  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:14:24.905  INFO 19655 --- [XNIO-1 task-59] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38180
+2022-03-18 21:14:24.907  INFO 19655 --- [XNIO-1 task-59] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:14:58.490  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38180 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:14:58.491  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:15:01.009  INFO 19655 --- [XNIO-1 task-60] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38204
+2022-03-18 21:15:01.012  INFO 19655 --- [XNIO-1 task-60] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:15:09.401  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38204 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:15:09.401  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:15:11.980  INFO 19655 --- [XNIO-1 task-61] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38220
+2022-03-18 21:15:11.982  INFO 19655 --- [XNIO-1 task-61] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:15:28.682  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38220 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:15:28.682  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:15:30.986  INFO 19655 --- [XNIO-1 task-62] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38234
+2022-03-18 21:15:30.988  INFO 19655 --- [XNIO-1 task-62] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:16:09.942  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38234 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:16:09.942  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:16:12.333  INFO 19655 --- [XNIO-1 task-63] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38256
+2022-03-18 21:16:12.335  INFO 19655 --- [XNIO-1 task-63] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:16:15.436  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38256 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:16:15.436  INFO 19655 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:16:17.842  INFO 19655 --- [XNIO-1 task-64] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38266
+2022-03-18 21:16:17.843  INFO 19655 --- [XNIO-1 task-64] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:16:20.804  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38266 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:16:20.804  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:16:23.142  INFO 19655 --- [XNIO-1 task-65] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38282
+2022-03-18 21:16:23.144  INFO 19655 --- [XNIO-1 task-65] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:16:35.245  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38282 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:16:35.245  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:16:37.627  INFO 19655 --- [XNIO-1 task-66] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38294
+2022-03-18 21:16:37.628  INFO 19655 --- [XNIO-1 task-66] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:17:32.910  INFO 19655 --- [XNIO-1 task-70] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:River (feat. Ed Sheeran) Eminem"
+2022-03-18 21:17:32.910  INFO 19655 --- [XNIO-1 task-68] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Untouchable Eminem"
+2022-03-18 21:17:32.911  INFO 19655 --- [XNIO-1 task-69] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Believe Eminem"
+2022-03-18 21:17:32.910  INFO 19655 --- [XNIO-1 task-67] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Walk On Water (feat. Beyoncé) Eminem"
+2022-03-18 21:17:32.911  INFO 19655 --- [XNIO-1 task-74] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Tragic Endings (feat. Skylar Grey) Eminem"
+2022-03-18 21:17:32.911  INFO 19655 --- [XNIO-1 task-73] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Bad Husband (feat. X Ambassadors) Eminem"
+2022-03-18 21:17:32.912  INFO 19655 --- [XNIO-1 task-77] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Like Home (feat. Alicia Keys) Eminem"
+2022-03-18 21:17:32.912  INFO 19655 --- [XNIO-1 task-72] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me (Intro) Eminem"
+2022-03-18 21:17:32.911  INFO 19655 --- [XNIO-1 task-78] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:In Your Head Eminem"
+2022-03-18 21:17:32.914  INFO 19655 --- [XNIO-1 task-83] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Castle Eminem"
+2022-03-18 21:17:32.911  INFO 19655 --- [XNIO-1 task-71] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Chloraseptic (feat. Phresher) Eminem"
+2022-03-18 21:17:32.913  INFO 19655 --- [XNIO-1 task-81] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Offended Eminem"
+2022-03-18 21:17:32.913  INFO 19655 --- [XNIO-1 task-80] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Framed Eminem"
+2022-03-18 21:17:32.913  INFO 19655 --- [XNIO-1 task-79] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Need Me (feat. Pink) Eminem"
+2022-03-18 21:17:32.914  INFO 19655 --- [XNIO-1 task-75] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Revival (Interlude) Eminem"
+2022-03-18 21:17:32.914  INFO 19655 --- [XNIO-1 task-82] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Arose Eminem"
+2022-03-18 21:17:32.915  INFO 19655 --- [XNIO-1 task-76] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Nowhere Fast (feat. Kehlani) Eminem"
+2022-03-18 21:17:32.915  INFO 19655 --- [XNIO-1 task-84] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Heat Eminem"
+2022-03-18 21:17:32.916  INFO 19655 --- [XNIO-1 task-85] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me Eminem"
+2022-03-18 21:17:33.735  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-19] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Chloraseptic (feat. Phresher) Eminem
+2022-03-18 21:17:33.786  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-14] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Bad Husband (feat. X Ambassadors) Eminem
+2022-03-18 21:17:33.804  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-18] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Castle Eminem
+2022-03-18 21:17:33.831  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-9] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: River (feat. Ed Sheeran) Eminem
+2022-03-18 21:17:33.847  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-15] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Like Home (feat. Alicia Keys) Eminem
+2022-03-18 21:17:33.873  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-12] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Walk On Water (feat. Beyoncé) Eminem
+2022-03-18 21:17:33.890  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-11] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Untouchable Eminem
+2022-03-18 21:17:33.898  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-13] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Tragic Endings (feat. Skylar Grey) Eminem
+2022-03-18 21:17:33.929  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-16] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me (Intro) Eminem
+2022-03-18 21:17:33.955  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-17] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: In Your Head Eminem
+2022-03-18 21:17:34.462  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-19] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Believe Eminem
+2022-03-18 21:17:34.539  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-14] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Offended Eminem
+2022-03-18 21:17:34.549  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-9] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Need Me (feat. Pink) Eminem
+2022-03-18 21:17:34.572  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-16] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me Eminem
+2022-03-18 21:17:34.621  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-15] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Revival (Interlude) Eminem
+2022-03-18 21:17:34.654  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-18] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Framed Eminem
+2022-03-18 21:17:34.689  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-13] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Heat Eminem
+2022-03-18 21:17:34.708  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-12] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Arose Eminem
+2022-03-18 21:17:34.806  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-11] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Nowhere Fast (feat. Kehlani) Eminem
+2022-03-18 21:17:35.231  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38294 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:17:35.231  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:19:25.613  INFO 19655 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38420
+2022-03-18 21:19:25.614  INFO 19655 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Believe Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Like Home (feat. Alicia Keys) Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-25] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Tragic Endings (feat. Skylar Grey) Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-12] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Walk On Water (feat. Beyoncé) Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Framed Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-24] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Bad Husband (feat. X Ambassadors) Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Chloraseptic (feat. Phresher) Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-28] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me Eminem"
+2022-03-18 21:19:44.483  INFO 19655 --- [XNIO-1 task-30] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Arose Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Untouchable Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-17] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Revival (Interlude) Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:River (feat. Ed Sheeran) Eminem"
+2022-03-18 21:19:44.482  INFO 19655 --- [XNIO-1 task-14] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me (Intro) Eminem"
+2022-03-18 21:19:44.483  INFO 19655 --- [XNIO-1 task-20] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Castle Eminem"
+2022-03-18 21:19:44.483  INFO 19655 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:In Your Head Eminem"
+2022-03-18 21:19:44.483  INFO 19655 --- [XNIO-1 task-21] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Need Me (feat. Pink) Eminem"
+2022-03-18 21:19:44.483  INFO 19655 --- [XNIO-1 task-15] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Offended Eminem"
+2022-03-18 21:19:44.483  INFO 19655 --- [XNIO-1 task-27] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Heat Eminem"
+2022-03-18 21:19:44.483  INFO 19655 --- [XNIO-1 task-22] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Nowhere Fast (feat. Kehlani) Eminem"
+2022-03-18 21:19:45.086  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-24] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Chloraseptic (feat. Phresher) Eminem
+2022-03-18 21:19:45.124  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-20] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Tragic Endings (feat. Skylar Grey) Eminem
+2022-03-18 21:19:45.138  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-27] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Arose Eminem
+2022-03-18 21:19:45.167  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-21] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Walk On Water (feat. Beyoncé) Eminem
+2022-03-18 21:19:45.170  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-25] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me Eminem
+2022-03-18 21:19:45.232  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-28] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Revival (Interlude) Eminem
+2022-03-18 21:19:45.297  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-22] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Framed Eminem
+2022-03-18 21:19:45.323  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-11] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Believe Eminem
+2022-03-18 21:19:45.345  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-26] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Untouchable Eminem
+2022-03-18 21:19:45.377  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-23] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Bad Husband (feat. X Ambassadors) Eminem
+2022-03-18 21:19:45.633  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-20] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: River (feat. Ed Sheeran) Eminem
+2022-03-18 21:19:45.678  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-24] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Like Home (feat. Alicia Keys) Eminem
+2022-03-18 21:19:45.792  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-21] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Castle Eminem
+2022-03-18 21:19:45.820  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-27] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me (Intro) Eminem
+2022-03-18 21:19:45.886  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-28] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Need Me (feat. Pink) Eminem
+2022-03-18 21:19:45.903  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-22] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Offended Eminem
+2022-03-18 21:19:45.987  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-25] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: In Your Head Eminem
+2022-03-18 21:19:46.013  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-11] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Heat Eminem
+2022-03-18 21:19:46.083  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-26] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Nowhere Fast (feat. Kehlani) Eminem
+2022-03-18 21:19:46.088  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAjAIAJ0VtaW5lbSAtIFdhbGsgT24gV2F0ZXIgKE9mZmljaWFsIFZpZGVvKQALRW1pbmVtTXVzaWMAAAAAAATp0AALcnlyNzVOMG5raTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1yeXI3NU4wbmtpMAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 21:19:46.693  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"f81595c548bfc584aa2427a9cb5a35da","event":{"token":"63f25cc0381df274","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:21:02.348  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38420 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:21:02.349  INFO 19655 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 21:21:04.722  INFO 19655 --- [XNIO-1 task-48] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38506
+2022-03-18 21:21:04.724  INFO 19655 --- [XNIO-1 task-48] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-52] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Walk On Water (feat. Beyoncé) Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-54] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:River (feat. Ed Sheeran) Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-50] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Believe Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-56] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me (Intro) Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-64] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Castle Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-62] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Heat Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-59] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Tragic Endings (feat. Skylar Grey) Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-55] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Like Home (feat. Alicia Keys) Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-61] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Framed Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-58] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Bad Husband (feat. X Ambassadors) Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-57] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-70] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Nowhere Fast (feat. Kehlani) Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-66] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Arose Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-65] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:In Your Head Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-60] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Offended Eminem"
+2022-03-18 21:21:08.936  INFO 19655 --- [XNIO-1 task-63] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Need Me (feat. Pink) Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-51] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Untouchable Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-53] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Revival (Interlude) Eminem"
+2022-03-18 21:21:08.935  INFO 19655 --- [XNIO-1 task-49] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Chloraseptic (feat. Phresher) Eminem"
+2022-03-18 21:21:09.531  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-30] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me (Intro) Eminem
+2022-03-18 21:21:09.531  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-34] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Like Home (feat. Alicia Keys) Eminem
+2022-03-18 21:21:09.563  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-31] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Castle Eminem
+2022-03-18 21:21:09.572  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-26] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Walk On Water (feat. Beyoncé) Eminem
+2022-03-18 21:21:09.590  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-36] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Bad Husband (feat. X Ambassadors) Eminem
+2022-03-18 21:21:09.631  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-32] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Heat Eminem
+2022-03-18 21:21:09.643  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-29] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Believe Eminem
+2022-03-18 21:21:09.648  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-33] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Tragic Endings (feat. Skylar Grey) Eminem
+2022-03-18 21:21:09.654  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-37] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me Eminem
+2022-03-18 21:21:09.697  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-35] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Framed Eminem
+2022-03-18 21:21:10.052  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-30] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Nowhere Fast (feat. Kehlani) Eminem
+2022-03-18 21:21:10.242  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-36] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Offended Eminem
+2022-03-18 21:21:10.266  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-26] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: In Your Head Eminem
+2022-03-18 21:21:10.283  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-31] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Arose Eminem
+2022-03-18 21:21:10.321  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-34] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: River (feat. Ed Sheeran) Eminem
+2022-03-18 21:21:10.344  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-37] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Chloraseptic (feat. Phresher) Eminem
+2022-03-18 21:21:10.345  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-33] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Revival (Interlude) Eminem
+2022-03-18 21:21:10.408  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-32] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Need Me (feat. Pink) Eminem
+2022-03-18 21:21:10.544  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-29] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Untouchable Eminem
+2022-03-18 21:21:11.111  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAjAIAJ0VtaW5lbSAtIFdhbGsgT24gV2F0ZXIgKE9mZmljaWFsIFZpZGVvKQALRW1pbmVtTXVzaWMAAAAAAATp0AALcnlyNzVOMG5raTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1yeXI3NU4wbmtpMAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 21:21:11.169  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"5095143e1060eb0faa65c65afcbea18e","event":{"token":"63f25cc0381df274","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:23:23.778  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38506 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:23:23.778  INFO 19655 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 21:23:26.247  INFO 19655 --- [XNIO-1 task-87] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38594
+2022-03-18 21:23:26.248  INFO 19655 --- [XNIO-1 task-87] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:23:26.672  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38594 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:23:26.672  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:23:42.012  INFO 19655 --- [XNIO-1 task-88] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38608
+2022-03-18 21:23:42.014  INFO 19655 --- [XNIO-1 task-88] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:23:42.487  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38608 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:23:42.487  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:23:50.119  INFO 19655 --- [XNIO-1 task-89] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38622
+2022-03-18 21:23:50.121  INFO 19655 --- [XNIO-1 task-89] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-91] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Chloraseptic (feat. Phresher) Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-95] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-8] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Need Me (feat. Pink) Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:In Your Head Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Castle Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-96] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Revival (Interlude) Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Bad Husband (feat. X Ambassadors) Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Heat Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Tragic Endings (feat. Skylar Grey) Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-92] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Believe Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-91] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Framed Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Nowhere Fast (feat. Kehlani) Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-25] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Arose Eminem"
+2022-03-18 21:24:10.048  INFO 19655 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Offended Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Like Home (feat. Alicia Keys) Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me (Intro) Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-90] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Walk On Water (feat. Beyoncé) Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-93] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:River (feat. Ed Sheeran) Eminem"
+2022-03-18 21:24:10.047  INFO 19655 --- [XNIO-1 task-94] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Untouchable Eminem"
+2022-03-18 21:24:10.599  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-42] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Bad Husband (feat. X Ambassadors) Eminem
+2022-03-18 21:24:10.638  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-41] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Revival (Interlude) Eminem
+2022-03-18 21:24:10.674  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-44] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Tragic Endings (feat. Skylar Grey) Eminem
+2022-03-18 21:24:10.675  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-38] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Need Me (feat. Pink) Eminem
+2022-03-18 21:24:10.703  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-29] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Chloraseptic (feat. Phresher) Eminem
+2022-03-18 21:24:10.747  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-45] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Believe Eminem
+2022-03-18 21:24:10.764  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-46] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Framed Eminem
+2022-03-18 21:24:10.804  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-39] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: In Your Head Eminem
+2022-03-18 21:24:10.824  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-40] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Castle Eminem
+2022-03-18 21:24:10.885  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-43] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Heat Eminem
+2022-03-18 21:24:11.225  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-41] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Nowhere Fast (feat. Kehlani) Eminem
+2022-03-18 21:24:11.342  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-44] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Arose Eminem
+2022-03-18 21:24:11.346  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-42] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me Eminem
+2022-03-18 21:24:11.376  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-46] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Walk On Water (feat. Beyoncé) Eminem
+2022-03-18 21:24:11.441  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-45] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me (Intro) Eminem
+2022-03-18 21:24:11.441  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-39] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: River (feat. Ed Sheeran) Eminem
+2022-03-18 21:24:11.472  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-38] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Offended Eminem
+2022-03-18 21:24:11.515  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-40] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Untouchable Eminem
+2022-03-18 21:24:11.536  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-29] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Like Home (feat. Alicia Keys) Eminem
+2022-03-18 21:24:11.998  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAjAIAJ0VtaW5lbSAtIFdhbGsgT24gV2F0ZXIgKE9mZmljaWFsIFZpZGVvKQALRW1pbmVtTXVzaWMAAAAAAATp0AALcnlyNzVOMG5raTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1yeXI3NU4wbmtpMAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 21:24:12.836  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"aaee6121085b54b48c301dab766a6a63","event":{"token":"63f25cc0381df274","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:25:34.842  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38622 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:25:34.842  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 21:25:37.223  INFO 19655 --- [XNIO-1 task-23] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38716
+2022-03-18 21:25:37.225  INFO 19655 --- [XNIO-1 task-23] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:25:46.024  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38716 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:25:46.025  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:25:48.556  INFO 19655 --- [XNIO-1 task-31] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38728
+2022-03-18 21:25:48.557  INFO 19655 --- [XNIO-1 task-31] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:25:59.419  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38728 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:25:59.419  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:26:02.220  INFO 19655 --- [XNIO-1 task-34] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38742
+2022-03-18 21:26:02.222  INFO 19655 --- [XNIO-1 task-34] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:26:20.738  INFO 19655 --- [XNIO-1 task-36] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:undefined"
+2022-03-18 21:26:21.380  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-29] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: undefined
+2022-03-18 21:26:21.890  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAxQIAX1VuZGVmaW5lZCBtZWFuaW5nIGluIGhpbmRpIHx8IHVuZGVmaW5lZCBrYSBtYXRsYWIga3lhIGhvdGEgaGFpIHx8IGVuZ2xpc2ggdG8gaGluZGkgd29yZCBtZWFuaW5nAAxZZWxsb3cgV29yZHMAAAAAAACUcAALdzlMNUtza1VGY0EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj13OUw1S3NrVUZjQQAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 21:26:21.996  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"4872f202db716a9674bff1a9be14b97d","event":{"token":"63f25cc0381df274","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:26:50.015  INFO 19655 --- [XNIO-1 task-37] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Believe Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-44] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Revival (Interlude) Eminem"
+2022-03-18 21:26:50.015  INFO 19655 --- [XNIO-1 task-39] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Chloraseptic (feat. Phresher) Eminem"
+2022-03-18 21:26:50.015  INFO 19655 --- [XNIO-1 task-40] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Untouchable Eminem"
+2022-03-18 21:26:50.015  INFO 19655 --- [XNIO-1 task-41] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me (Intro) Eminem"
+2022-03-18 21:26:50.015  INFO 19655 --- [XNIO-1 task-42] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:River (feat. Ed Sheeran) Eminem"
+2022-03-18 21:26:50.015  INFO 19655 --- [XNIO-1 task-38] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Walk On Water (feat. Beyoncé) Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-45] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Bad Husband (feat. X Ambassadors) Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-43] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Remind Me Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-37] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Framed Eminem"
+2022-03-18 21:26:50.017  INFO 19655 --- [XNIO-1 task-39] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Arose Eminem"
+2022-03-18 21:26:50.017  INFO 19655 --- [XNIO-1 task-56] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Offended Eminem"
+2022-03-18 21:26:50.017  INFO 19655 --- [XNIO-1 task-54] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Need Me (feat. Pink) Eminem"
+2022-03-18 21:26:50.017  INFO 19655 --- [XNIO-1 task-50] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Castle Eminem"
+2022-03-18 21:26:50.017  INFO 19655 --- [XNIO-1 task-44] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:In Your Head Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-46] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Tragic Endings (feat. Skylar Grey) Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-47] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Nowhere Fast (feat. Kehlani) Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-52] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Heat Eminem"
+2022-03-18 21:26:50.016  INFO 19655 --- [XNIO-1 task-48] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Like Home (feat. Alicia Keys) Eminem"
+2022-03-18 21:26:50.580  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-49] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me (Intro) Eminem
+2022-03-18 21:26:50.636  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-47] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Chloraseptic (feat. Phresher) Eminem
+2022-03-18 21:26:50.636  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-51] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Walk On Water (feat. Beyoncé) Eminem
+2022-03-18 21:26:50.653  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-29] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Believe Eminem
+2022-03-18 21:26:50.659  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-52] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Bad Husband (feat. X Ambassadors) Eminem
+2022-03-18 21:26:50.672  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-55] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Arose Eminem
+2022-03-18 21:26:50.727  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-54] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Framed Eminem
+2022-03-18 21:26:50.759  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-53] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Remind Me Eminem
+2022-03-18 21:26:50.787  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-50] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: River (feat. Ed Sheeran) Eminem
+2022-03-18 21:26:50.828  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-48] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Untouchable Eminem
+2022-03-18 21:26:51.196  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-49] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Revival (Interlude) Eminem
+2022-03-18 21:26:51.319  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-51] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Offended Eminem
+2022-03-18 21:26:51.334  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-29] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Castle Eminem
+2022-03-18 21:26:51.364  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-47] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Need Me (feat. Pink) Eminem
+2022-03-18 21:26:51.387  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-54] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Nowhere Fast (feat. Kehlani) Eminem
+2022-03-18 21:26:51.392  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-55] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Tragic Endings (feat. Skylar Grey) Eminem
+2022-03-18 21:26:51.410  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-50] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Like Home (feat. Alicia Keys) Eminem
+2022-03-18 21:26:51.473  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-53] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Heat Eminem
+2022-03-18 21:26:51.473  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-52] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: In Your Head Eminem
+2022-03-18 21:26:52.101  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"4872f202db716a9674bff1a9be14b97d","event":{"token":"740ad1bef93e66e6","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:27:02.625  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAjAIAJ0VtaW5lbSAtIFdhbGsgT24gV2F0ZXIgKE9mZmljaWFsIFZpZGVvKQALRW1pbmVtTXVzaWMAAAAAAATp0AALcnlyNzVOMG5raTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1yeXI3NU4wbmtpMAAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 21:27:46.758  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38742 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:27:46.758  INFO 19655 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 21:27:49.136  INFO 19655 --- [XNIO-1 task-81] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38884
+2022-03-18 21:27:49.138  INFO 19655 --- [XNIO-1 task-81] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:28:06.187  INFO 19655 --- [XNIO-1 task-79] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:asdad"
+2022-03-18 21:28:06.908  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-52] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: asdad
+2022-03-18 21:28:07.330  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAqAIAR0NvbmdyZXNzIEhvbGRzIFN0YXRld2lkZSBSYXN0YSBSb2tvIEFuZG9sYW4gRm9yIEZhcm1lcnM6IFNwZWNpYWwgUmVwb3J0AAdBYWogVGFrAAAAAAAXf6AAC2lISmVZNkY5R1VZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9aUhKZVk2RjlHVVkAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"757216229508513833"}
+2022-03-18 21:28:07.517  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"5f7b18bf4e15da38e21c9dd5ffeb77d2","event":{"token":"740ad1bef93e66e6","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:28:24.956  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38884 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:28:24.956  INFO 19655 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 21:28:27.274  INFO 19655 --- [XNIO-1 task-71] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:38918
+2022-03-18 21:28:27.276  INFO 19655 --- [XNIO-1 task-71] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-18 21:28:57.048  INFO 19655 --- [XNIO-1 task-83] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:kodaline"
+2022-03-18 21:28:57.694  INFO 19655 --- [lava-daemon-pool-info-loader-2-thread-52] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: kodaline
+2022-03-18 21:28:58.240  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","track":"QAAAgAIAHktvZGFsaW5lIC0gQWxsIEkgV2FudCAoUGFydCAxKQAIS29kYWxpbmUAAAAAAATiAAALbXRmN2hDMTdJQk0AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1tdGY3aEMxN0lCTQAHeW91dHViZQAAAAAAAAAA","guildId":"757216229508513833"}
+2022-03-18 21:28:58.313  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"voiceUpdate","guildId":"757216229508513833","sessionId":"a376b2cf35d09e9459304f559fb88a8f","event":{"token":"740ad1bef93e66e6","guild_id":"757216229508513833","endpoint":"india6575.discord.media:443"}}
+2022-03-18 21:51:31.443  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38918 -- CloseStatus[code=1006, reason=]
+2022-03-18 21:51:31.443  INFO 19655 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 21:51:32.671  INFO 19655 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-18 21:51:32.672  INFO 19655 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-03-18 21:51:32.681  INFO 19655 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
