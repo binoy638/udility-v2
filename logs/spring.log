@@ -814,3 +814,48 @@ java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminati
 2022-03-19 23:00:09.422  INFO 92589 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-03-19 23:00:09.423  INFO 92589 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
 2022-03-19 23:00:09.425  INFO 92589 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-19 23:38:07.763  INFO 105884 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.13
+	Lavaplayer      1.3.96-original
+
+2022-03-19 23:38:07.881  INFO 105884 --- [main] lavalink.server.Launcher                 : Starting Launcher on binoy638-Linux with PID 105884 (/media/binoy638/Projects/Projects/typescript/udility-v2/Lavalink.jar started by binoy638 in /media/binoy638/Projects/Projects/typescript/udility-v2)
+2022-03-19 23:38:07.882  INFO 105884 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-03-19 23:38:07.947  WARN 105884 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-03-19 23:38:08.919  WARN 105884 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-19 23:38:08.943  INFO 105884 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-19 23:38:08.943  INFO 105884 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1028 ms
+2022-03-19 23:38:09.340  WARN 105884 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-03-19 23:38:09.671  INFO 105884 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-03-19 23:38:09.866  INFO 105884 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-03-19 23:38:09.866  INFO 105884 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-03-19 23:38:09.868  INFO 105884 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-03-19 23:38:09.871  INFO 105884 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-03-19 23:38:10.013  INFO 105884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-19 23:38:10.283  INFO 105884 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-19 23:38:10.292  INFO 105884 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-19 23:38:10.354  INFO 105884 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-03-19 23:38:10.357  INFO 105884 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.091 seconds (JVM running for 3.927)
+2022-03-19 23:38:10.358  INFO 105884 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-03-19 23:45:52.581  INFO 105884 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-19 23:45:52.581  INFO 105884 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-19 23:45:52.592  INFO 105884 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2022-03-19 23:45:52.631  INFO 105884 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58950
+2022-03-19 23:45:52.698  INFO 105884 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
+2022-03-19 23:49:08.692  INFO 105884 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:58950 -- CloseStatus[code=1006, reason=]
+2022-03-19 23:49:08.693  INFO 105884 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-19 23:54:55.879  INFO 105884 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59188
+2022-03-19 23:54:55.881  INFO 105884 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from lavaclient
