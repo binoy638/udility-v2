@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --inspect=8181 --respawn --transpile-only src/index.ts",
-    "start": "npm run build && node ./dist/src/index.js",
+    "start": "node ./dist/src/index.js",
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "jest",

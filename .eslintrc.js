@@ -23,6 +23,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier', 'import', 'simple-import-sort'],
   rules: {
+    'consistent-return': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    'no-dupe-class-members': 'off',
+    'unicorn/no-null': 'off',
     'unicorn/filename-case': 'off',
     'prettier/prettier': 'error',
     'import/prefer-default-export': 'off',

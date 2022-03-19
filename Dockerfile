@@ -1,39 +1,16 @@
-### Stage 1 ###
+FROM node:16.14-alpine
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    cairo-dev \
+    pango-dev \
+    jpeg-dev \
+    giflib-dev \
+    librsvg-dev
 
-FROM node:16-alpine as ts-compiler
-
-WORKDIR /app
-
-COPY package*.json ./
-
-COPY tsconfig*.json ./
-
-RUN npm install
-
-COPY . ./
-
+WORKDIR /home/app
+COPY package.json package-lock.json ./
+COPY ./ ./
+RUN npm install 
 RUN npm run build
-
-
-### Stage 2 ###
-FROM node:16-alpine as ts-remover
-
-WORKDIR /app
-
-COPY --from=ts-compiler /app/package*.json ./
-
-COPY --from=ts-compiler /app/dist ./
-
-RUN npm install --only=production
-
-
-### Stage 3 ###
-FROM gcr.io/distroless/nodejs:16
-
-WORKDIR /app
-
-COPY --from=ts-remover /app ./
-
-USER 1000
-
-CMD ["src/index.js"]

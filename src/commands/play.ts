@@ -1,98 +1,151 @@
+/* eslint-disable consistent-return */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable sonarjs/no-duplicate-string */
 import { Addable } from '@lavaclient/queue';
 import { SpotifyItemType } from '@lavaclient/spotify';
-import type { NewsChannel, TextChannel, ThreadChannel } from 'discord.js';
 import { ICommand } from 'wokcommands';
 
-type MessageChannel = TextChannel | ThreadChannel | NewsChannel;
+import logger from '../config/logger';
+import { CommandContext, MessageChannel, Utils } from '../lib';
 
 export default {
-  category: 'Testing',
-  description: 'Replies with pong aaa',
+  category: 'Music',
+  description: 'Play a song',
+  aliases: ['p'],
   slash: 'both',
+  guildOnly: true,
   options: [
     {
       name: 'query',
       type: 'STRING',
-      description: 'provide song name or youtube/spotify link',
+      description: 'The search query',
+      required: true,
+    },
+    {
+      name: 'next',
+      description: 'Whether to add the results to the top of the queue.',
+      type: 'BOOLEAN',
+      required: false,
     },
   ],
-  testOnly: true,
-  callback: async ({ interaction, message, client, args }) => {
-    const next = false;
-    const query = interaction.options.getString('query') || args[0];
+  expectedArgs: '<query>',
+  syntaxError: { error: 'Incorrect usage! Please use "{PREFIX}add {ARGUMENTS}"' },
+  callback: async ({ interaction, message, args }): Promise<unknown> => {
+    const next = interaction?.options.getBoolean('next') || false;
+
+    const query = interaction?.options.getString('query') || args.join(' ');
+
+    const context = new CommandContext(interaction, message);
+
+    const userID = interaction?.user?.id || message?.author.id;
+
     if (!query) {
-      return interaction.reply({ content: 'Please provide a query', ephemeral: true });
+      logger.info('No query provided');
+      context.reply('No query provided', { ephemeral: true });
+      return;
     }
-    if (interaction) {
-      const vc = interaction.guild?.voiceStates?.cache?.get(interaction.user.id)?.channel;
 
-      let player = interaction.client.music.players.get(interaction.guild!.id);
+    logger.info('Interaction found: play');
 
-      let tracks: Addable[] = [];
-      let msg = '';
-      if (client.music.spotify.isSpotifyUrl(query)) {
-        const item = await client.music.spotify.load(query);
-        switch (item?.type) {
-          case SpotifyItemType.Track:
-            tracks = [await item.resolveYoutubeTrack()];
-            msg = `Queued track [**${item.name}**](${query}).`;
-            break;
-          case SpotifyItemType.Artist:
-            tracks = await item.resolveYoutubeTracks();
-            msg = `Queued the **Top ${tracks.length} tracks** for [**${item.name}**](${query}).`;
-            break;
-          case SpotifyItemType.Album:
-          case SpotifyItemType.Playlist:
-            tracks = await item.resolveYoutubeTracks();
+    const vc = context.guild?.voiceStates?.cache?.get(userID)?.channel;
 
-            msg = `Queued **${tracks.length} tracks** from ${SpotifyItemType[item.type].toLowerCase()} [**${
-              item.name
-            }**](${query}).`;
-            break;
-          default:
-            return interaction.reply({ content: "Sorry, couldn't find anything :/", ephemeral: true });
-        }
-      } else {
-        const results = await client.music.rest.loadTracks(/^https?:\/\//.test(query) ? query : `ytsearch:${query}`);
+    if (!vc) {
+      logger.info('No voice channel found');
+      context.reply(Utils.embed('Join a voice channel first.'), { ephemeral: true });
+      return;
+    }
+    let player = context.client.music.players.get(context.guild!.id);
 
-        switch (results.loadType) {
-          case 'LOAD_FAILED':
-          case 'NO_MATCHES':
-            return interaction.reply({ content: 'uh oh something went wrong', ephemeral: true });
-          case 'PLAYLIST_LOADED':
-            tracks = results.tracks;
-            msg = `Queued playlist [**${results.playlistInfo.name}**](${query}), it has a total of **${tracks.length}** tracks.`;
-            break;
-          case 'TRACK_LOADED':
-          case 'SEARCH_RESULT': {
-            const [track] = results.tracks;
-            tracks = [track];
-            msg = `Queued [**${track.info.title}**](${track.info.uri})`;
-            break;
-          }
-          default:
-            return interaction.reply({ content: "Sorry, couldn't find anything :/", ephemeral: true });
-        }
-      }
+    if (player && player.channelId !== vc.id) {
+      context.reply(Utils.embed(`Join <#${player.channelId}>`), { ephemeral: true });
+      return;
+    }
 
-      /* create a player and/or join the member's vc. */
-      if (!player?.connected) {
-        player ??= client.music.createPlayer(interaction.guild!.id);
-        player.queue.channel = interaction.channel as MessageChannel;
-        await player.connect(vc.id, { deafened: true });
-      }
-      /* reply with the queued message. */
-      const started = player.playing || player.paused;
-      await interaction.reply({ content: msg, ephemeral: true });
+    let tracks: Addable[] = [];
+    let msg = '';
+    if (context.client.music.spotify.isSpotifyUrl(query)) {
+      logger.info('Spotify url found');
+      const item = await context.client.music.spotify.load(query);
+      switch (item?.type) {
+        case SpotifyItemType.Track:
+          tracks = [await item.resolveYoutubeTrack()];
+          msg = `Queued track [**${item.name}**](${query}).`;
+          break;
+        case SpotifyItemType.Artist:
+          tracks = await item.resolveYoutubeTracks();
+          msg = `Queued the **Top ${tracks.length} tracks** for [**${item.name}**](${query}).`;
+          break;
+        case SpotifyItemType.Album:
+          tracks = await item.resolveYoutubeTracks();
+          msg = `Queued ${tracks.length} tracks** for [**${item.name}**](${query}).`;
+          break;
+        case SpotifyItemType.Playlist:
+          tracks = await item.resolveYoutubeTracks();
 
-      /* do queue tings. */
-      player.queue.add(tracks, { requester: interaction.user.id, next });
-      if (!started) {
-        await player.queue.start();
+          msg = `Queued **${tracks.length} tracks** from ${SpotifyItemType[item.type].toLowerCase()} [**${
+            item.name
+          }**](${query}).`;
+          break;
+        default:
+          context.reply(Utils.embed("Sorry, couldn't find anything :/"), { ephemeral: true });
+          return;
       }
     } else {
-      const vc = message.guild?.voiceStates?.cache?.get(message.author.id)?.channel;
-      console.log(vc);
+      const results = await context.client.music.rest.loadTracks(
+        /^https?:\/\//.test(query) ? query : `ytsearch:${query}`
+      );
+
+      switch (results.loadType) {
+        case 'LOAD_FAILED':
+          logger.info(`Failed to load ${query}\n${results}`);
+          context.reply(Utils.embed('uh oh something went wrong'), { ephemeral: true });
+          return;
+
+        case 'NO_MATCHES':
+          logger.info(`No match found ${query}\n${results}`);
+          context.reply(Utils.embed('uh oh something went wrong'), { ephemeral: true });
+          return;
+
+        case 'PLAYLIST_LOADED':
+          logger.info(`Playlist loaded ${query}`);
+          tracks = results.tracks;
+          msg = `Queued playlist [**${results.playlistInfo.name}**](${query}), it has a total of **${tracks.length}** tracks.`;
+          break;
+        case 'TRACK_LOADED':
+          logger.info(`track loaded ${query}\n${results}`);
+          context.reply(Utils.embed('uh oh something went wrong'), { ephemeral: true });
+          return;
+
+        case 'SEARCH_RESULT': {
+          logger.info(`Search result found ${query}`);
+          const [track] = results.tracks;
+          tracks = [track];
+          msg = `Queued [**${track.info.title}**](${track.info.uri})`;
+          break;
+        }
+        default:
+          logger.info(`No case matched ${query}\n${results}`);
+          context.reply(Utils.embed("Sorry, couldn't find anything :/"), { ephemeral: true });
+          return;
+      }
+    }
+
+    /* create a player and/or join the member's vc. */
+    if (!player?.connected) {
+      player ??= context.client.music.createPlayer(context.guild!.id);
+      player.queue.channel = context.channel as MessageChannel;
+      player.connect(vc.id, { deafened: true });
+    }
+    /* reply with the queued message. */
+    const started = player.playing || player.paused;
+
+    context.reply(Utils.embed(msg));
+
+    /* do queue tings. */
+    player.queue.add(tracks, { requester: userID, next });
+    if (!started) {
+      await player.queue.start();
     }
   },
 } as ICommand;

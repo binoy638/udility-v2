@@ -1,69 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable unicorn/prefer-module */
 /* eslint-disable unicorn/prefer-node-protocol */
-import { load } from '@lavaclient/spotify';
 import '@lavaclient/queue/register';
-import type { NewsChannel, TextChannel, ThreadChannel } from 'discord.js';
-import { Client, Intents } from 'discord.js';
+
+import { load } from '@lavaclient/spotify';
 import dotenv from 'dotenv';
-import { Node } from 'lavaclient';
 import path from 'path';
 import WOKCommands from 'wokcommands';
 
+import { Bot, Utils } from './lib';
+
 dotenv.config();
-
-// declare module 'discord.js' {
-//   interface Client {
-//     readonly music: Node;
-//   }
-// }
-
-export type MessageChannel = TextChannel | ThreadChannel | NewsChannel;
-
-declare module 'discord.js' {
-  interface Client {
-    readonly music: Node;
-  }
-}
-
-declare module 'lavaclient' {
-  interface Player {
-    nightcore: boolean;
-  }
-}
-
-declare module '@lavaclient/queue' {
-  interface Queue {
-    channel: MessageChannel;
-  }
-}
-
-class Bot extends Client {
-  readonly music: Node;
-
-  constructor() {
-    super({
-      intents: [
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MESSAGES,
-        Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
-        Intents.FLAGS.GUILD_VOICE_STATES,
-        Intents.FLAGS.GUILD_MEMBERS,
-      ],
-    });
-
-    this.music = new Node({
-      sendGatewayPayload: (id, payload) => this.guilds.cache.get(id)?.shard?.send(payload),
-      connection: {
-        host: process.env.LAVA_HOST!,
-        password: process.env.LAVA_PASS!,
-        port: 2333,
-      },
-    });
-
-    this.ws.on('VOICE_SERVER_UPDATE', data => this.music.handleVoiceUpdate(data));
-    this.ws.on('VOICE_STATE_UPDATE', data => this.music.handleVoiceUpdate(data));
-  }
-}
 
 load({
   client: {
@@ -76,16 +24,31 @@ load({
 const client = new Bot();
 
 client.on('ready', () => {
-  const cmd = new WOKCommands(client, {
+  // eslint-disable-next-line no-unused-vars
+  new WOKCommands(client, {
     commandsDir: path.join(__dirname, 'commands'),
-    typeScript: true,
+    typeScript: process.env.NODE_ENV !== 'production',
     testServers: '757216229508513833',
-  });
+  }).setDefaultPrefix('?');
+
   client.music.connect(client.user!.id);
 });
 
 client.music.on('connect', () => {
   console.log(`[music] now connected to lavalink`);
+});
+
+client.music.on('queueFinish', queue => {
+  queue.player.disconnect();
+  queue.player.node.destroyPlayer(queue.player.guildId);
+});
+
+client.music.on('trackStart', (queue, song) => {
+  const embed = Utils.embed(
+    // eslint-disable-next-line sonarjs/no-nested-template-literals
+    `Now playing [**${song.title}**](${song.uri}) ${song.requester ? `<@${song.requester}>` : ''}`
+  );
+  queue.channel.send({ embeds: [embed] });
 });
 
 client.login(process.env.TOKEN);
