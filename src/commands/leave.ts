@@ -6,10 +6,10 @@ import { CommandContext, Utils } from '../lib';
 
 export default {
   category: 'Music',
-  description: 'Skip currently playing song',
-  aliases: ['s', 'fs'],
+  description: 'Kick bot from voice channel',
   slash: 'both',
   guildOnly: true,
+  testOnly: true,
   callback: async ({ interaction, message }): Promise<unknown> => {
     const context = new CommandContext(interaction, message);
     const player = context.client.music.players.get(context.guild!.id);
@@ -25,6 +25,10 @@ export default {
       return;
     }
 
-    player.queue.next();
+    await context.reply(Utils.embed(`Left <#${player.channelId}>`));
+
+    /* leave the player's voice channel. */
+    player.disconnect();
+    context.client.music.destroyPlayer(player.guildId);
   },
 } as ICommand;

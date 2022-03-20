@@ -1,3 +1,0 @@
-FROM fredboat/lavalink:dev
-
-RUN apt install default-jre

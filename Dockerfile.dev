@@ -1,5 +1,5 @@
 FROM node:16.14-alpine
-
+ENV NODE_ENV=development
 WORKDIR /home/app
 
 ADD package*.json ./

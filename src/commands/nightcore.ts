@@ -6,8 +6,7 @@ import { CommandContext, Utils } from '../lib';
 
 export default {
   category: 'Music',
-  description: 'Skip currently playing song',
-  aliases: ['s', 'fs'],
+  description: 'Add nightcore to the current song',
   slash: 'both',
   guildOnly: true,
   callback: async ({ interaction, message }): Promise<unknown> => {
