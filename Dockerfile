@@ -1,5 +1,5 @@
 FROM node:16.14-alpine
-RUN apk add --no-cache \
+RUN apk add \
     python3 \
     make \
     g++ \

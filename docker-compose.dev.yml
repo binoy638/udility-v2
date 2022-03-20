@@ -1,15 +1,22 @@
 version: "3.7"
  
 services:
-  app-dev:
+  udility-dev:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    container_name: express-app-dev
+    depends_on:
+      lavalink:
+        condition: service_healthy
+    command: npm run dev
+    links:
+      - lavalink
     volumes:
       # - /app/node_modules
-      - ./src:/app/src
-    ports:
-      - "8080:8080"
-      - "8181:8181"
-    command: npm run dev
+      - ./src:/home/app/src
+  lavalink:
+    image: fredboat/lavalink:dev-
+    volumes:
+      - ./application/application.yml:/opt/Lavalink/application.yml
+    healthcheck:
+      test: 'echo lavalink'

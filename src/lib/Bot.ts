@@ -30,7 +30,7 @@ export class Bot extends Client {
     this.music = new Node({
       sendGatewayPayload: (id, payload) => this.guilds.cache.get(id)?.shard?.send(payload),
       connection: {
-        host: process.env.NODE_ENV === 'production' ? process.env.LAVA_HOST! : 'localhost',
+        host: process.env.LAVA_HOST!,
         password: process.env.LAVA_PASS!,
         port: 2333,
       },
