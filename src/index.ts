@@ -24,6 +24,7 @@ load({
 const client = new Bot();
 
 client.on('ready', () => {
+  console.log(process.env.NODE_ENV);
   // eslint-disable-next-line no-unused-vars
   new WOKCommands(client, {
     commandsDir: path.join(__dirname, 'commands'),
