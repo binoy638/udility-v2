@@ -11,10 +11,11 @@ services:
     links:
       - lavalink
   lavalink:
-    image: fredboat/lavalink:dev-
+    build:
+      context: .
+      dockerfile: Dockerfile.lavalink
     restart: on-failure:5
-    volumes:
-      - ./application/application.yml:/opt/Lavalink/application.yml
     healthcheck:
       test: 'echo lavalink'
+
 

@@ -12,14 +12,7 @@ services:
     links:
       - lavalink
     volumes:
-      # - /app/node_modules
       - ./src:/home/app/src
-  # lavalink:
-  #   image: fredboat/lavalink:dev-
-  #   volumes:
-  #     - ./application/application.yml:/opt/Lavalink/application.yml
-  #   healthcheck:
-  #     test: 'echo lavalink'
   lavalink:
     build:
       context: .
