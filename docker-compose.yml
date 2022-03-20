@@ -10,7 +10,7 @@ services:
     links:
       - lavalink
   lavalink:
-    image: fredboat/lavalink:dev
+    image: fredboat/lavalink:dev-
     volumes:
       - ./application/application.yml:/opt/Lavalink/application.yml
     healthcheck:

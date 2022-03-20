@@ -3,6 +3,8 @@ Dockerfile
 docker-compose.yml
 .dockerignore
 
+#build filder
+dist
 # Git files
 .git
 .github
