@@ -12,18 +12,24 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create env file
-        uses: SpicyPizza/create-envfile@v1.3
-        with:
-          envkey_DEBUG: false
+        env:
           NODE_ENV: 'production'
           TOKEN: ${{ secrets.TOKEN }}
           LAVA_HOST: 'lavalink'
           LAVA_PASS: 'youshallnotpass'
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          directory: .
-          file_name: .env
-          fail_on_empty: false
+        run: |
+          cat <<EOF > .env
+          echo NODE_ENV="$NODE_ENV" >> .env
+          echo TOKEN="$TOKEN" >> .env
+          echo LAVA_HOST="$LAVA_HOST" >> .env
+          echo SPOTIFY_CLIENT_ID="$SPOTIFY_CLIENT_ID" >> .env
+          echo SPOTIFY_CLIENT_SECRET="$SPOTIFY_CLIENT_SECRET" >> .env
+          EOF
+
+          echo "cat .env"
+          cat .env
 
       - name: Rebuild Image and start container
         run: sudo docker-compose up -d --build
