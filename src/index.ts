@@ -30,7 +30,8 @@ client.on('ready', () => {
     commandsDir: path.join(__dirname, 'commands'),
     typeScript: process.env.NODE_ENV !== 'production',
     testServers: '757216229508513833',
-  }).setDefaultPrefix('?');
+    botOwners: ['312265605715722240'],
+  }).setDefaultPrefix(process.env.PREFIX!);
 
   client.music.connect(client.user!.id);
 });

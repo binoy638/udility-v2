@@ -1,4 +1,4 @@
-# Starter Express app with typescript
+# Multi-Purpose Discord Bot
 
 ## Running the app in the development mode
 

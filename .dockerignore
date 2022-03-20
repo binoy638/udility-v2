@@ -1,10 +1,17 @@
 # Docker files
 Dockerfile
 docker-compose.yml
+docker-compose.dev.yml
+Dockerfile.dev
+Dockerfile.lavalink
 .dockerignore
 
-#build filder
+#folders
 dist
+logs
+.vscode
+.husky
+
 # Git files
 .git
 .github

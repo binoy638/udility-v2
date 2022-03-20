@@ -7,6 +7,7 @@ import { CommandContext, Utils } from '../lib';
 export default {
   category: 'Testing',
   description: 'test',
+  ownerOnly: true,
   slash: 'both',
   options: [
     {
