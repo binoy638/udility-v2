@@ -17,5 +17,5 @@ module.exports = {
   },
 
   moduleDirectories: ['node_modules', 'src'],
-  testPathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/node_modules/'],
+  testPathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/node_modules/', '<rootDir>/src/commands/test.ts'],
 };

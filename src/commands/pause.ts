@@ -28,6 +28,10 @@ export default {
       context.reply(Utils.embed('I am already paused.'), { ephemeral: true });
       return;
     }
+
+    if (!context.isMessage) {
+      context.reply(Utils.embed('pausing...'), { ephemeral: true });
+    }
     player.pause();
   },
 } as ICommand;

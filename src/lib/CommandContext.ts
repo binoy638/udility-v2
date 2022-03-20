@@ -18,6 +18,8 @@ type MessageChannel = TextChannel | ThreadChannel | NewsChannel;
 export class CommandContext {
   readonly interaction: CommandInteraction | Message;
 
+  readonly isMessage: boolean;
+
   constructor(interaction: CommandInteraction | undefined, message: Message | undefined) {
     if (!interaction && !message) {
       throw new Error('No interaction or message provided');
@@ -25,8 +27,10 @@ export class CommandContext {
 
     if (message instanceof Message) {
       this.interaction = message;
+      this.isMessage = true;
     } else if (interaction instanceof CommandInteraction) {
       this.interaction = interaction;
+      this.isMessage = false;
     } else {
       throw new TypeError('No interaction or message provided');
     }

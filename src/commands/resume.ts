@@ -25,6 +25,9 @@ export default {
       return;
     }
     if (player.paused) {
+      if (!context.isMessage) {
+        context.reply(Utils.embed('resuming...'), { ephemeral: true });
+      }
       player.resume();
       return;
     }
