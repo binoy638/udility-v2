@@ -30,8 +30,9 @@ export default {
     }
 
     if (!context.isMessage) {
-      context.reply(Utils.embed('pausing...'), { ephemeral: true });
+      context.reply(Utils.embed('paused.'), { ephemeral: true });
     }
+    context.reply(Utils.embed(`song paused by <@${context.user.id}>`));
     player.pause();
   },
 } as ICommand;

@@ -26,8 +26,9 @@ export default {
     }
     if (player.paused) {
       if (!context.isMessage) {
-        context.reply(Utils.embed('resuming...'), { ephemeral: true });
+        context.reply(Utils.embed('song resumed.'), { ephemeral: true });
       }
+      context.reply(Utils.embed(`song resumed by <@${context.user.id}>`));
       player.resume();
       return;
     }
