@@ -112,10 +112,13 @@ export default {
           tracks = results.tracks;
           msg = `Queued playlist [**${results.playlistInfo.name}**](${query}), it has a total of **${tracks.length}** tracks.`;
           break;
-        case 'TRACK_LOADED':
+        case 'TRACK_LOADED': {
           logger.info(`track loaded ${query}\n${results}`);
-          context.reply(Utils.embed('uh oh something went wrong'), { ephemeral: true });
-          return;
+          const [track] = results.tracks;
+          tracks = [track];
+          msg = `Queued [**${track.info.title}**](${track.info.uri})`;
+          break;
+        }
 
         case 'SEARCH_RESULT': {
           logger.info(`Search result found ${query}`);

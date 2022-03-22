@@ -24,15 +24,14 @@ load({
 const client = new Bot();
 
 client.on('ready', () => {
-  console.log(process.env.NODE_ENV);
-  // eslint-disable-next-line no-unused-vars
   new WOKCommands(client, {
     commandsDir: path.join(__dirname, 'commands'),
     typeScript: process.env.NODE_ENV !== 'production',
     testServers: '757216229508513833',
     botOwners: ['312265605715722240'],
+    mongoUri: process.env.MONGO_URI!,
+    disabledDefaultCommands: ['channelonly', 'command', 'language', 'requiredrole', 'help'],
   }).setDefaultPrefix(process.env.PREFIX!);
-
   client.music.connect(client.user!.id);
 });
 
@@ -51,6 +50,11 @@ client.music.on('trackStart', (queue, song) => {
     `Now playing [**${song.title}**](${song.uri}) ${song.requester ? `<@${song.requester}>` : ''}`
   );
   queue.channel.send({ embeds: [embed] });
+});
+
+client.on('interactionCreate', interaction => {
+  if (!interaction.isButton()) return;
+  console.log(interaction);
 });
 
 client.login(process.env.TOKEN);

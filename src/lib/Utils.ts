@@ -8,6 +8,7 @@ import {
   TextChannel,
   ThreadChannel,
 } from 'discord.js';
+import { getBasicInfo } from 'ytdl-core';
 
 export type MessageChannel = TextChannel | ThreadChannel | NewsChannel;
 
@@ -20,5 +21,11 @@ export abstract class Utils {
     options.color ??= Utils.PRIMARY_COLOR;
 
     return new MessageEmbed(options);
+  }
+
+  static async getThumbnail(url: string): Promise<string | null> {
+    const info = await getBasicInfo(url);
+    if (!info) return null;
+    return info.videoDetails?.thumbnails[0]?.url || null;
   }
 }
