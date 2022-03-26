@@ -6,12 +6,13 @@ services:
     depends_on:
       lavalink:
         condition: service_healthy
+      redis:
+        condition: service_healthy
     command: npm start
     restart: on-failure:5
     links:
       - lavalink
-    redis:
-      condition: service_healthy
+
   lavalink:
     build:
       context: .
