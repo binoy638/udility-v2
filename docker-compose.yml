@@ -10,6 +10,8 @@ services:
     restart: on-failure:5
     links:
       - lavalink
+    redis:
+      condition: service_healthy
   lavalink:
     build:
       context: .
@@ -17,5 +19,13 @@ services:
     restart: on-failure:5
     healthcheck:
       test: 'echo lavalink'
+  redis:
+    image: redis:6.2.6-alpine
+    container_name: redis-dis
+    restart: always
+    logging:
+      driver: "none"
+    healthcheck:
+      test: ["CMD", "redis-cli","ping"]
 
 
