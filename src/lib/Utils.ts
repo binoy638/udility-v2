@@ -1,6 +1,8 @@
 /* eslint-disable unicorn/numeric-separators-style */
 /* eslint-disable unicorn/number-literal-case */
+import { Queue } from '@lavaclient/queue';
 import {
+  ButtonInteraction,
   ColorResolvable,
   MessageEmbed,
   MessageEmbedOptions,
@@ -9,6 +11,8 @@ import {
   ThreadChannel,
 } from 'discord.js';
 import { getBasicInfo } from 'ytdl-core';
+
+import redisClient from '../config/redis';
 
 export type MessageChannel = TextChannel | ThreadChannel | NewsChannel;
 
@@ -23,9 +27,34 @@ export abstract class Utils {
     return new MessageEmbed(options);
   }
 
-  static async getThumbnail(url: string): Promise<string | null> {
+  static async getThumbnail(url: string): Promise<string> {
     const info = await getBasicInfo(url);
-    if (!info) return null;
-    return info.videoDetails?.thumbnails[0]?.url || null;
+    if (!info) return 'https://pbs.twimg.com/profile_images/1431129444362579971/jGrgSKDD_400x400.jpg';
+    return (
+      info.videoDetails?.thumbnails[0]?.url ||
+      'https://pbs.twimg.com/profile_images/1431129444362579971/jGrgSKDD_400x400.jpg'
+    );
+  }
+
+  static async deleteMusicPlayerEmbed(queue: Queue): Promise<void> {
+    if (!queue) return;
+    const guildID = queue.channel.guildId;
+    if (guildID) {
+      const oldMsgID = await redisClient.get(guildID);
+      if (oldMsgID) {
+        const oldMsg = await queue.channel.messages.fetch(oldMsgID);
+        await oldMsg.delete();
+        await redisClient.del(guildID);
+      }
+    }
+  }
+
+  //* Button Interaction Handlers
+
+  static async handlePlayButton(interaction: ButtonInteraction): Promise<void> {
+    const player = interaction.client.music.players.get(interaction.guild!.id);
+    if (!player?.connected) {
+      return interaction.reply({ content: 'I am not connected to a voice channel', ephemeral: true });
+    }
   }
 }

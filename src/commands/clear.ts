@@ -1,17 +1,15 @@
-/* eslint-disable no-unused-vars */
-
 import { ICommand } from 'wokcommands';
 
 import { MusicPlayer } from '../lib/MusicPlayer';
 
 export default {
   category: 'Music',
-  description: 'Resume the currently paused song',
-  aliases: ['rs'],
+  description: 'Clear the music player queue',
   slash: 'both',
   guildOnly: true,
+  testOnly: true,
   callback: async ({ interaction, message }) => {
     const player = new MusicPlayer(interaction, message);
-    player.resume();
+    player.clear();
   },
 } as ICommand;

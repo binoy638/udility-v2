@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 
-import { MessageActionRow, MessageButton, MessageEmbed } from 'discord.js';
 import { ICommand } from 'wokcommands';
 
-import { CommandContext, Utils } from '../lib';
+import { CommandContext } from '../lib';
 
 export default {
   category: 'Testing',
@@ -20,9 +19,10 @@ export default {
   expectedArgs: '<query>',
   syntaxError: { error: 'Incorrect usage! Please use "{PREFIX}add {ARGUMENTS}"' },
   testOnly: true,
-  callback: async ({ interaction, message, args }) => {
+  callback: async ({ interaction, message }) => {
     // console.log(interaction);
     const ctx = new CommandContext(interaction, message);
+    console.log(ctx);
 
     // const embed = {
     //   title: 'Linkin Park - Numb',
@@ -41,10 +41,6 @@ export default {
     //   ],
     // };
 
-    const row = new MessageActionRow().addComponents(
-      new MessageButton().setCustomId('primary').setLabel('Primary').setStyle('PRIMARY')
-    );
-
-    ctx.reply({ components: [row] });
+    // ctx.reply({ components: [row] });
   },
 } as ICommand;
