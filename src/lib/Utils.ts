@@ -4,6 +4,8 @@ import { Queue } from '@lavaclient/queue';
 import {
   ButtonInteraction,
   ColorResolvable,
+  MessageActionRow,
+  MessageButton,
   MessageEmbed,
   MessageEmbedOptions,
   NewsChannel,
@@ -12,6 +14,7 @@ import {
 } from 'discord.js';
 import { getBasicInfo } from 'ytdl-core';
 
+import { Button, ButtonEmojis } from '../@types';
 import redisClient from '../config/redis';
 
 export type MessageChannel = TextChannel | ThreadChannel | NewsChannel;
@@ -56,5 +59,17 @@ export abstract class Utils {
     if (!player?.connected) {
       return interaction.reply({ content: 'I am not connected to a voice channel', ephemeral: true });
     }
+  }
+
+  static getMusicPlayerButtons(isPlaying: boolean): MessageActionRow {
+    return new MessageActionRow().addComponents(
+      new MessageButton().setCustomId(Button.loop).setEmoji(ButtonEmojis.loop).setStyle('SECONDARY'),
+      new MessageButton().setCustomId(Button.skip).setEmoji(ButtonEmojis.skip).setStyle('SECONDARY'),
+      isPlaying
+        ? new MessageButton().setCustomId(Button.pause).setEmoji(ButtonEmojis.pause).setStyle('SECONDARY')
+        : new MessageButton().setCustomId(Button.play).setEmoji(ButtonEmojis.play).setStyle('SECONDARY'),
+      new MessageButton().setCustomId(Button.stop).setEmoji(ButtonEmojis.stop).setStyle('SECONDARY'),
+      new MessageButton().setCustomId(Button.shuffle).setEmoji(ButtonEmojis.shuffle).setStyle('SECONDARY')
+    );
   }
 }

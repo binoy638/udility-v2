@@ -5,12 +5,11 @@
 import '@lavaclient/queue/register';
 
 import { load } from '@lavaclient/spotify';
-import { MessageActionRow, MessageButton } from 'discord.js';
 import dotenv from 'dotenv';
 import path from 'path';
 import WOKCommands from 'wokcommands';
 
-import { Button, ButtonEmojis } from './@types';
+import { Button } from './@types';
 import logger from './config/logger';
 import redisClient from './config/redis';
 import { Bot, Utils } from './lib';
@@ -30,6 +29,7 @@ const client = new Bot();
 
 client.on('ready', async () => {
   await redisClient.connect();
+  await redisClient.flushAll();
   new WOKCommands(client, {
     commandsDir: path.join(__dirname, 'commands'),
     typeScript: process.env.NODE_ENV !== 'production',
@@ -66,42 +66,46 @@ client.music.on('trackStart', async (queue, song) => {
   if (nextTrack) {
     embed.fields = [{ name: 'Up Next', value: nextTrack.title }];
   }
-  const row = new MessageActionRow().addComponents(
-    new MessageButton().setCustomId(Button.loop).setEmoji(ButtonEmojis.loop).setStyle('SECONDARY'),
-    new MessageButton().setCustomId(Button.play).setEmoji(ButtonEmojis.play).setStyle('SECONDARY'),
-    new MessageButton().setCustomId(Button.skip).setEmoji(ButtonEmojis.skip).setStyle('SECONDARY'),
-    // new MessageButton().setCustomId('pause').setEmoji(ButtonEmojis.pause).setStyle('SECONDARY'),
-    new MessageButton().setCustomId(Button.stop).setEmoji(ButtonEmojis.stop).setStyle('SECONDARY'),
 
-    new MessageButton().setCustomId(Button.shuffle).setEmoji(ButtonEmojis.shuffle).setStyle('SECONDARY')
-  );
+  const row = Utils.getMusicPlayerButtons(true);
+  const guildID = queue.channel.guildId;
 
-  const msg = await queue.channel.send({ embeds: [embed], components: [row] });
-
-  if (msg.guildId) {
-    redisClient.set(msg.guildId, msg.id);
+  if (guildID) {
+    const oldMsgID = await redisClient.get(guildID);
+    if (oldMsgID) {
+      const oldMsg = await queue.channel.messages.fetch(oldMsgID);
+      await oldMsg.edit({ embeds: [embed], components: [row] });
+    } else {
+      const newMsg = await queue.channel.send({ embeds: [embed], components: [row] });
+      await redisClient.set(guildID, newMsg.id);
+    }
   }
 });
 
 client.music.on('trackEnd', async queue => {
+  console.log('[music] track ended');
   await Utils.deleteMusicPlayerEmbed(queue);
 });
 
-client.on('interactionCreate', interaction => {
+client.on('interactionCreate', async interaction => {
   if (!interaction.isButton()) return;
   const buttonID = interaction.customId;
   switch (buttonID) {
     case Button.play: {
+      interaction.deferUpdate();
       const player = new MusicPlayer(interaction, undefined);
-      player.resume();
+      await player.resume();
+
       break;
     }
     case Button.pause: {
+      interaction.deferUpdate();
       const player = new MusicPlayer(interaction, undefined);
-      player.pause();
+      await player.pause();
       break;
     }
     case Button.skip: {
+      interaction.deferUpdate();
       const player = new MusicPlayer(interaction, undefined);
       player.skip();
       break;

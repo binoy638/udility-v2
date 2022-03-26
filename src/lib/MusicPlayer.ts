@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Addable } from '@lavaclient/queue';
@@ -5,6 +6,7 @@ import { SpotifyItemType } from '@lavaclient/spotify';
 
 import { ButtonEmojis } from '../@types';
 import logger from '../config/logger';
+import redisClient from '../config/redis';
 import { CommandContext, Utils } from '.';
 
 export class MusicPlayer extends CommandContext {
@@ -121,7 +123,7 @@ export class MusicPlayer extends CommandContext {
     }
   }
 
-  pause(): void {
+  async pause(): Promise<void> {
     // eslint-disable-next-line prefer-destructuring
     const player = this.player;
     if (!player?.connected) {
@@ -138,16 +140,30 @@ export class MusicPlayer extends CommandContext {
       this.reply(Utils.embed('I am already paused.'), { ephemeral: true });
       return;
     }
+    const guildID = player.queue.channel.guildId;
+    if (guildID) {
+      logger.info(guildID);
+      const msg = await redisClient.get(guildID);
+      if (msg) {
+        const msgObj = await player.queue.channel.messages.fetch(msg);
+        if (msgObj) {
+          logger.info(`msg obj found`);
 
-    if (!this.isMessage) {
-      this.reply(Utils.embed(`You paused \`${ButtonEmojis.pause}\` the song.`), { ephemeral: true });
-    } else {
-      this.reply(Utils.embed(`Song paused \`${ButtonEmojis.pause}\` by <@${this.user.id}>`));
+          const row = Utils.getMusicPlayerButtons(false);
+          await msgObj.edit({ embeds: [msgObj.embeds[0]], components: [row] });
+        }
+      }
     }
+
+    // if (!this.isMessage) {
+    //   this.reply(Utils.embed(`You paused \`${ButtonEmojis.pause}\` the song.`), { ephemeral: true });
+    // } else {
+    //   this.reply(Utils.embed(`Song paused \`${ButtonEmojis.pause}\` by <@${this.user.id}>`));
+    // }
     player.pause();
   }
 
-  resume(): void {
+  async resume(): Promise<void> {
     // eslint-disable-next-line prefer-destructuring
     const player = this.player;
     if (!player?.connected) {
@@ -162,14 +178,29 @@ export class MusicPlayer extends CommandContext {
       return;
     }
     if (player.paused) {
-      if (!this.isMessage) {
-        this.reply(Utils.embed(`You resumed  \`${ButtonEmojis.play}\` the song.`), { ephemeral: true });
+      const guildID = player.queue.channel.guildId;
+      if (guildID) {
+        logger.info(guildID);
+        const msg = await redisClient.get(guildID);
+        if (msg) {
+          const msgObj = await player.queue.channel.messages.fetch(msg);
+          if (msgObj) {
+            logger.info(`msg obj found`);
+
+            const row = Utils.getMusicPlayerButtons(true);
+            await msgObj.edit({ embeds: [msgObj.embeds[0]], components: [row] });
+          }
+        }
       }
-      this.reply(Utils.embed(`Song resumed \`${ButtonEmojis.play}\` by <@${this.user.id}>`));
       player.resume();
+      // if (!this.isMessage) {
+      //   this.reply(Utils.embed(`You resumed  \`${ButtonEmojis.play}\` the song.`), { ephemeral: true });
+      // } else {
+      //   this.reply(Utils.embed(`Song resumed \`${ButtonEmojis.play}\` by <@${this.user.id}>`));
+      // }
       return;
     }
-    this.reply(Utils.embed(`Song already playing \`${ButtonEmojis.play}\` `), { ephemeral: true });
+    this.sendFeedback(Utils.embed(`Song already playing \`${ButtonEmojis.play}\` `));
   }
 
   skip(): void {
@@ -204,9 +235,9 @@ export class MusicPlayer extends CommandContext {
     }
     if (player.queue.tracks.length > 1) {
       player.queue.shuffle();
-      this.reply(Utils.embed('Playlist shuffled.'), { ephemeral: true });
+      this.sendFeedback(Utils.embed('Playlist shuffled.'));
     } else {
-      this.reply(Utils.embed("You can't shuffle a single track"), { ephemeral: true });
+      this.sendFeedback(Utils.embed("You can't shuffle a single track"));
     }
   }
 
@@ -246,7 +277,7 @@ export class MusicPlayer extends CommandContext {
     }
 
     const loop = player.queue.loop;
-    if (loop.current === 0) {
+    if (loop.type === 0) {
       player.queue.setLoop(1);
       this.sendFeedback(Utils.embed('Looping the playlist'));
     } else {
