@@ -1,6 +1,6 @@
 import { ICommand } from 'wokcommands';
 
-import { MusicPlayer } from '../lib/MusicPlayer';
+import { MusicPlayer } from '../../lib/MusicPlayer';
 
 export default {
   category: 'Music',

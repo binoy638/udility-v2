@@ -1,17 +1,15 @@
-/* eslint-disable no-unused-vars */
-
 import { ICommand } from 'wokcommands';
 
-import { MusicPlayer } from '../lib/MusicPlayer';
+import { MusicPlayer } from '../../lib/MusicPlayer';
 
 export default {
   category: 'Music',
-  description: 'Skip the currently playing song',
-  aliases: ['next', 'fs'],
+  description: 'Clear the music player queue',
   slash: 'both',
   guildOnly: true,
+  testOnly: true,
   callback: async ({ interaction, message }) => {
     const player = new MusicPlayer(interaction, message);
-    player.skip();
+    player.clear();
   },
 } as ICommand;

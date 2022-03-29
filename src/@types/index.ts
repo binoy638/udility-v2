@@ -17,3 +17,14 @@ export enum ButtonEmojis {
   loop = '🔁',
   shuffle = '🔀',
 }
+
+export interface IEmote {
+  type: string;
+  alias: string;
+  url: string;
+}
+
+export interface IGuildEmotes {
+  guild: string;
+  emotes: IEmote[];
+}

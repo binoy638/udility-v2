@@ -1,6 +1,6 @@
 import { ICommand } from 'wokcommands';
 
-import { MusicPlayer } from '../lib/MusicPlayer';
+import { MusicPlayer } from '../../lib/MusicPlayer';
 
 export default {
   category: 'Music',
@@ -23,7 +23,7 @@ export default {
     },
   ],
   expectedArgs: '<query>',
-  syntaxError: { error: 'Incorrect usage! Please use "{PREFIX}add {ARGUMENTS}"' },
+  syntaxError: { error: 'Incorrect usage! Please use "{PREFIX}play {ARGUMENTS}"' },
   callback: async ({ interaction, message, args }) => {
     const next = interaction?.options.getBoolean('next') || false;
 

@@ -2,17 +2,16 @@
 
 import { ICommand } from 'wokcommands';
 
-import { MusicPlayer } from '../lib/MusicPlayer';
+import { MusicPlayer } from '../../lib/MusicPlayer';
 
 export default {
   category: 'Music',
-  description: 'Kick bot from voice channel',
-  aliases: ['disconnect', 'dc'],
+  description: 'Resume the currently paused song',
+  aliases: ['rs'],
   slash: 'both',
   guildOnly: true,
-  testOnly: true,
   callback: async ({ interaction, message }) => {
     const player = new MusicPlayer(interaction, message);
-    player.disconnect();
+    player.resume();
   },
 } as ICommand;
