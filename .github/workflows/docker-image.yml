@@ -19,6 +19,7 @@ jobs:
           LAVA_PASS: 'youshallnotpass'
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
           PREFIX: '?'
         run: |
           cat <<EOF > .env
@@ -29,6 +30,7 @@ jobs:
           SPOTIFY_CLIENT_ID=$SPOTIFY_CLIENT_ID
           SPOTIFY_CLIENT_SECRET=$SPOTIFY_CLIENT_SECRET
           PREFIX=$PREFIX
+          MONGO_URI=$MONGO_URI
           EOF
 
           echo "cat .env"
