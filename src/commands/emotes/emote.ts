@@ -60,7 +60,7 @@ export default {
       channel.send({
         embeds: [
           {
-            description: `${taggedUser ? `<@${taggedUser}>` : ''}`,
+            description: `${taggedUser ? `${taggedUser}` : ''}`,
             author: { name: ctx.user.tag, iconURL: ctx.user.displayAvatarURL() },
             image: { url: emote.url },
           },
