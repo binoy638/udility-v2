@@ -47,7 +47,6 @@ client.music.on('connect', () => {
 
 client.music.on('queueFinish', async queue => {
   queue.player.disconnect();
-  await Utils.deleteMusicPlayerEmbed(queue);
   queue.player.node.destroyPlayer(queue.player.guildId);
 });
 

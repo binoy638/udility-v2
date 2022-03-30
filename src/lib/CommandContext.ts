@@ -33,6 +33,7 @@ export class CommandContext {
       this.isMessage = true;
     } else if (interaction instanceof CommandInteraction || interaction instanceof ButtonInteraction) {
       this.interaction = interaction;
+
       this.isMessage = false;
     } else {
       throw new TypeError('No interaction or message provided');

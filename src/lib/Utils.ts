@@ -15,6 +15,7 @@ import {
 import { getBasicInfo } from 'ytdl-core';
 
 import { Button, ButtonEmojis } from '../@types';
+import logger from '../config/logger';
 import redisClient from '../config/redis';
 
 export type MessageChannel = TextChannel | ThreadChannel | NewsChannel;
@@ -41,14 +42,18 @@ export abstract class Utils {
 
   static async deleteMusicPlayerEmbed(queue: Queue): Promise<void> {
     if (!queue) return;
-    const guildID = queue.channel.guildId;
-    if (guildID) {
-      const oldMsgID = await redisClient.get(guildID);
-      if (oldMsgID) {
-        const oldMsg = await queue.channel.messages.fetch(oldMsgID);
-        await oldMsg.delete();
-        await redisClient.del(guildID);
+    try {
+      const guildID = queue.channel.guildId;
+      if (guildID) {
+        const oldMsgID = await redisClient.get(guildID);
+        if (oldMsgID) {
+          const oldMsg = await queue.channel.messages.fetch(oldMsgID);
+          await oldMsg.delete();
+          await redisClient.del(guildID);
+        }
       }
+    } catch (error) {
+      logger.error(error);
     }
   }
 
