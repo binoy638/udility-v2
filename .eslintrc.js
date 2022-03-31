@@ -23,6 +23,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier', 'import', 'simple-import-sort'],
   rules: {
+    'unicorn/prefer-node-protocol': 'off',
+    'unicorn/prefer-module': 'off',
     'no-unused-vrs': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'consistent-return': 'off',

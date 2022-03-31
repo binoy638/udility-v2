@@ -25,7 +25,7 @@ load({
   autoResolveYoutubeTracks: false,
 });
 
-const client = new Bot();
+export const client = new Bot();
 
 client.on('ready', async () => {
   await redisClient.connect();
@@ -127,6 +127,10 @@ client.on('interactionCreate', async interaction => {
     default:
       logger.info(`Unknown button interaction: ${buttonID}`);
   }
+});
+
+process.on('uncaughtException', error => {
+  logger.error(error);
 });
 
 client.login(process.env.TOKEN);

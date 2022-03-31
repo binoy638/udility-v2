@@ -2,8 +2,6 @@
 
 import { ICommand } from 'wokcommands';
 
-import { guildEmoteModel } from '../models/emote.schema';
-
 export default {
   category: 'Testing',
   description: 'test',
@@ -20,8 +18,6 @@ export default {
   syntaxError: { error: 'Incorrect usage! Please use "{PREFIX}add {ARGUMENTS}"' },
   testOnly: true,
   callback: async () => {
-    const emotes = await guildEmoteModel.find({}).lean(true);
-
-    console.log(emotes);
+    throw new Error('random error');
   },
 } as ICommand;
