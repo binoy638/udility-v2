@@ -9,7 +9,7 @@ services:
       redis:
         condition: service_healthy
     command: npm start
-    restart: on-failure:5
+    restart: always
     links:
       - lavalink
 
@@ -17,7 +17,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.lavalink
-    restart: on-failure:5
+    restart: always
     healthcheck:
       test: 'echo lavalink'
   redis:
