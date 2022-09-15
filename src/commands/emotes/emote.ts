@@ -73,9 +73,9 @@ export default {
         ctx.reply({ content: 'No emotes found', ephemeral: true });
         return;
       }
-      const allEmotesName = emotesObj?.emotes.map(emote => `${emote.alias}`);
+      const allEmotesName = emotesObj?.emotes.map(emote => emote.alias.toLowerCase());
       if (allEmotesName) {
-        const closestEmote = closest(alias, allEmotesName);
+        const closestEmote = closest(alias.toLowerCase(), allEmotesName);
 
         if (closestEmote) {
           const emote = emotesObj.emotes.find(emote_ => emote_.alias === closestEmote);
