@@ -155,7 +155,8 @@ const getUniquePost = async (subreddits: string[], channelID: string): Promise<P
     logger.info(`[reddit] post ${post.id} already exists in cache`);
     return getUniquePost(subreddits, channelID);
   }
-  await redisClient.SET(key, 'true');
+  // eslint-disable-next-line unicorn/numeric-separators-style
+  await redisClient.SETEX(key, 604800, 'true');
   return post;
 };
 
