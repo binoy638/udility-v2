@@ -8,7 +8,6 @@ export default {
   category: 'Misc',
   description: 'Disbale Automeme in the current channel.',
   slash: true,
-  permissions: ['ADMINISTRATOR'],
   guildOnly: true,
   callback: async ({ interaction }) => {
     const ctx = new CommandContext(interaction, undefined);
