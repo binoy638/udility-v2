@@ -162,7 +162,6 @@ const getUniquePost = async (subreddits: string[], channelID: string): Promise<P
 agenda.define('automeme', {}, async (job, done) => {
   try {
     const { data } = job.attrs;
-    console.log(data);
     if (data) {
       const { channelID, subreddits } = data;
       if (!channelID || !subreddits) return;
