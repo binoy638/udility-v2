@@ -53,7 +53,7 @@ class Reddit {
   constructor(subreddit: string, type?: PostType) {
     this.subreddit = subreddit;
     if (!type) {
-      const types = ['hot', 'new', 'top', 'rising'];
+      const types = ['hot', 'new' ];
       const index = Math.round(Math.random() * 3);
       this.type = types[index] as PostType;
     } else {
