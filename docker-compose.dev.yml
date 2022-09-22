@@ -29,3 +29,8 @@ services:
       driver: "none"
     healthcheck:
       test: ["CMD", "redis-cli","ping"]
+    volumes: 
+      - cache:/data
+volumes:
+  cache:
+    driver: local
