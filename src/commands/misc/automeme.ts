@@ -14,7 +14,7 @@ export default {
   category: 'Misc',
   description: 'Get regular memes from reddit',
   slash: true,
-  permissions: ['ADMINISTRATOR'],
+  // permissions: ['ADMINISTRATOR'],
   guildOnly: true,
   options: [
     {
