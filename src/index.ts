@@ -175,14 +175,14 @@ agenda.define('automeme', {}, async (job, done) => {
             const embed = new MessageEmbed({ title: post.title, url: post.permalink });
             await channel.send({ embeds: [embed] });
             if (post.media) await channel.send(post.media);
-          }
-          if (post.post_hint === 'link' || post.post_hint === 'rich:video') {
+          }else if(post.post_hint === 'link' || post.post_hint === 'rich:video') {
             const embed = new MessageEmbed({ title: post.title, url: post.permalink });
             await channel.send({ embeds: [embed] });
             if (post.url) await channel.send(post.url);
-          }
+          }else{
           const embed = new MessageEmbed({ title: post.title, url: post.permalink, image: { url: post.url } });
           await channel.send({ embeds: [embed] });
+          }
         }
       }
       done();
