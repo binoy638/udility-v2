@@ -39,6 +39,30 @@ export default {
     if (!subredditsString || !interval) return;
     const subreddits = subredditsString.split(',').map(sub => sub.trim());
 
+    // Check if job already exists
+    const isExists = await agenda.jobs({ 'data.channelID': channel.id });
+
+    if (isExists.length > 0) {
+      const job = isExists[0];
+      const { data } = job.attrs;
+      if (data) {
+        const oldSubreddits = data.subreddits as string[];
+        // Remove duplicates
+        const combinedSubreddits = [...new Set([...oldSubreddits, ...subreddits])];
+
+        data.subreddits = combinedSubreddits;
+        data.interval = interval;
+        await job.save();
+        ctx.reply(
+          Utils.embed({
+            title: '✅ Updated',
+            description: `Subreddit: \`${combinedSubreddits.join(',')}\`\nInterval: \`${interval} minutes\``,
+          })
+        );
+        return;
+      }
+    }
+
     const createJob = () => {
       const job = agenda.create('automeme', {
         channelID: ctx.channel.id,
