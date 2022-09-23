@@ -10,6 +10,16 @@ import { CommandContext } from '../../lib/CommandContext';
 import Reddit from '../../lib/Reddit';
 import { Utils } from '../../lib/Utils';
 
+const createJob = (channelID: string, subreddits: string[], interval: number) => {
+  const job = agenda.create('automeme', {
+    channelID,
+    subreddits,
+  });
+  job.repeatEvery(`${interval} minutes`);
+  job.save();
+  logger.info(`Created job for ${channelID}`);
+};
+
 export default {
   category: 'Misc',
   description: 'Get regular memes from reddit',
@@ -50,28 +60,21 @@ export default {
         // Remove duplicates
         const combinedSubreddits = [...new Set([...oldSubreddits, ...subreddits])];
 
-        data.subreddits = combinedSubreddits;
-        data.interval = interval;
-        await job.save();
-        ctx.reply(
-          Utils.embed({
-            title: '✅ Updated',
-            description: `Subreddit: \`${combinedSubreddits.join(',')}\`\nInterval: \`${interval} minutes\``,
-          })
-        );
-        return;
+        const isRemoved = await agenda.cancel({ 'data.channelID': ctx.channel.id });
+
+        if (isRemoved && isRemoved > 0) {
+          createJob(ctx.channel.id, combinedSubreddits, interval);
+
+          ctx.reply(
+            Utils.embed({
+              title: '✅ Updated',
+              description: `Subreddit: \`${combinedSubreddits.join(', ')}\`\nInterval: \`${interval} minutes\``,
+            })
+          );
+          return;
+        }
       }
     }
-
-    const createJob = () => {
-      const job = agenda.create('automeme', {
-        channelID: ctx.channel.id,
-        subreddits,
-      });
-      job.repeatEvery(`${interval} minutes`);
-      job.save();
-      logger.info(`Created job for ${ctx.channel.id}`);
-    };
 
     const Promises = subreddits.map(subreddit => {
       const _subreddit = new Reddit(subreddit, 'hot');
@@ -113,7 +116,7 @@ export default {
         return;
       case 1:
         subs = subreddits.join(',');
-        createJob();
+        createJob(ctx.channel.id, subreddits, interval);
         ctx.reply(
           Utils.embed({
             title: '✅ Subscribed',
@@ -133,7 +136,7 @@ export default {
       case 3:
         if (channel.nsfw) {
           subs = subreddits.join(',');
-          createJob();
+          createJob(ctx.channel.id, subreddits, interval);
           ctx.reply(
             Utils.embed({
               title: '✅ Subscribed',
