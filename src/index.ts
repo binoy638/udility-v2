@@ -143,7 +143,7 @@ process.on('SIGTERM', () => process.exit());
 client.login(process.env.TOKEN);
 
 const getUniquePost = async (subreddits: string[], channelID: string): Promise<Post> => {
-  const index = Math.round(Math.random() * (subreddits.length - 1));
+  const index = Math.floor(Math.random() * subreddits.length);
   const subreddit = subreddits[index];
   const reddit = new Reddit(subreddit);
   const post = await reddit.getRandomPost();
@@ -175,13 +175,13 @@ agenda.define('automeme', {}, async (job, done) => {
             const embed = new MessageEmbed({ title: post.title, url: post.permalink });
             await channel.send({ embeds: [embed] });
             if (post.media) await channel.send(post.media);
-          }else if(post.post_hint === 'link' || post.post_hint === 'rich:video') {
+          } else if (post.post_hint === 'link' || post.post_hint === 'rich:video') {
             const embed = new MessageEmbed({ title: post.title, url: post.permalink });
             await channel.send({ embeds: [embed] });
             if (post.url) await channel.send(post.url);
-          }else{
-          const embed = new MessageEmbed({ title: post.title, url: post.permalink, image: { url: post.url } });
-          await channel.send({ embeds: [embed] });
+          } else {
+            const embed = new MessageEmbed({ title: post.title, url: post.permalink, image: { url: post.url } });
+            await channel.send({ embeds: [embed] });
           }
         }
       }
