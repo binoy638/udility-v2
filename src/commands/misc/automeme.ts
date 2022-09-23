@@ -108,6 +108,7 @@ export default {
         return;
       case 3:
         if (channel.nsfw) {
+          subs = subreddits.join(',');
           createJob();
           ctx.reply(
             Utils.embed({
