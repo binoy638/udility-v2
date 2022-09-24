@@ -78,7 +78,7 @@ class Reddit {
     }
   }
 
-  async getPosts(count = 26): Promise<Post[] | undefined> {
+  async getPosts(count = 500): Promise<Post[] | undefined> {
     try {
       const { data } = await axios.get(`${this.URL}?limit=${count}`);
       if (!data || !data.data.dist) return;
