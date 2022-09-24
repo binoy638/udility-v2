@@ -112,7 +112,7 @@ class Reddit {
     try {
       const posts = await this.getPosts();
       if (!posts) throw new Error('could not fetch subreddit');
-      const index = Math.round(Math.random() * posts.length);
+      const index = Math.floor(Math.random() * posts.length);
       return posts[index];
     } catch (error) {
       logger.error(error);
