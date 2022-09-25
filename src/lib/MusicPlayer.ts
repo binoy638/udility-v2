@@ -65,7 +65,9 @@ export class MusicPlayer extends CommandContext {
           return;
       }
     } else {
-      const results = await this.client.music.rest.loadTracks(/^https?:\/\//.test(query) ? query : `ytsearch:${query}`);
+      const results = await this.client.music.rest.loadTracks(
+        /^https?:\/\//.test(query) ? query : `ytsearch:${query} lyrics`
+      );
 
       switch (results.loadType) {
         case 'LOAD_FAILED':
@@ -107,6 +109,8 @@ export class MusicPlayer extends CommandContext {
 
     /* create a player and/or join the member's vc. */
     if (!player?.connected) {
+      const key = `playerMessage:${this.guild!.id}`;
+      await redisClient.del(key);
       player ??= this.client.music.createPlayer(this.guild!.id);
       player.queue.channel = this.channel;
       player.connect(vc.id, { deafened: true });
@@ -143,7 +147,8 @@ export class MusicPlayer extends CommandContext {
     const guildID = player.queue.channel.guildId;
     if (guildID) {
       logger.info(guildID);
-      const msg = await redisClient.get(guildID);
+      const key = `playerMessage:${guildID}`;
+      const msg = await redisClient.get(key);
       if (msg) {
         const msgObj = await player.queue.channel.messages.fetch(msg);
         if (msgObj) {
@@ -181,7 +186,8 @@ export class MusicPlayer extends CommandContext {
       const guildID = player.queue.channel.guildId;
       if (guildID) {
         logger.info(guildID);
-        const msg = await redisClient.get(guildID);
+        const key = `playerMessage:${guildID}`;
+        const msg = await redisClient.get(key);
         if (msg) {
           const msgObj = await player.queue.channel.messages.fetch(msg);
           if (msgObj) {
@@ -260,6 +266,17 @@ export class MusicPlayer extends CommandContext {
     /* leave the player's voice channel. */
     player.disconnect();
     this.client.music.destroyPlayer(player.guildId);
+
+    // delete player message if exists
+    const key = `playerMessage:${player.guildId}`;
+    const msg = await redisClient.get(key);
+    if (msg) {
+      redisClient.DEL(key);
+      const msgObj = await player.queue.channel.messages.fetch(msg);
+      if (msgObj) {
+        msgObj.delete();
+      }
+    }
   }
 
   loop(): void {
