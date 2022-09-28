@@ -8,7 +8,7 @@ import redisClient from '../config/redis';
 import { Bot } from './Bot';
 import Reddit, { Post } from './Reddit';
 
-const getUniquePost = async (subreddits: string[], channelID: string): Promise<Post> => {
+const getUniquePost = async (subreddits: string[], channelID: string, retries = 10): Promise<Post> => {
   const index = Math.floor(Math.random() * subreddits.length);
   const subreddit = subreddits[index];
   const reddit = new Reddit(subreddit);
@@ -17,9 +17,9 @@ const getUniquePost = async (subreddits: string[], channelID: string): Promise<P
   if (!post) throw new Error('Could not fetch post');
   const key = `${channelID}-${post.id}`;
   const exists = await redisClient.GET(key);
-  if (exists) {
-    logger.info(`[reddit] post ${post.id} already exists in cache`);
-    return getUniquePost(subreddits, channelID);
+  if (exists && retries > 0) {
+    logger.info(`[reddit] [${subreddit}] post ${post.id} already exists in cache`);
+    return getUniquePost(subreddits, channelID, retries - 1);
   }
   // eslint-disable-next-line unicorn/numeric-separators-style
   await redisClient.SETEX(key, 172800, 'true');

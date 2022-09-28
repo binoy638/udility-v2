@@ -38,7 +38,6 @@ client.on('ready', async () => {
     disabledDefaultCommands: ['channelonly', 'command', 'language', 'requiredrole', 'help'],
   }).setDefaultPrefix(process.env.PREFIX!);
   client.music.connect(client.user!.id);
-  redisClient.FLUSHALL();
 });
 
 client.music.on('connect', onConnect);
