@@ -22,7 +22,7 @@ const getUniquePost = async (subreddits: string[], channelID: string): Promise<P
     return getUniquePost(subreddits, channelID);
   }
   // eslint-disable-next-line unicorn/numeric-separators-style
-  await redisClient.SETEX(key, 604800, 'true');
+  await redisClient.SETEX(key, 172800, 'true');
   return post;
 };
 
