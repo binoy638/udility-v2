@@ -1,32 +1,28 @@
 /* eslint-disable no-unused-vars */
 import { ICommand } from 'wokcommands';
 
-import redisClient from '../config/redis';
+import Anime from '../lib/Anime';
 
 export default {
   category: 'Testing',
   description: 'test',
   ownerOnly: true,
   slash: 'both',
-  // options: [
-  //   {
-  //     name: 'query',
-  //     type: 'STRING',
-  //     description: 'query string',
-  //   },
-  // ],
-  expectedArgs: '<query>',
-  syntaxError: { error: 'Incorrect usage! Please use "{PREFIX}add {ARGUMENTS}"' },
   testOnly: true,
-  callback: async () => {
-    const data = await redisClient.GET('mykey');
-    if (data) {
+  options: [
+    {
+      name: 'mal_id',
+      type: 'NUMBER',
+      description: 'Myanimelist id',
+      required: true,
+    },
+  ],
+  callback: async ({ interaction }) => {
+    const id = interaction?.options.getNumber('mal_id');
+    if (id) {
+      const anime = new Anime(id);
+      const data = await anime.fetchAnime();
       console.log(data);
-      console.log('exists');
-    } else {
-      console.log('does not exist');
-      redisClient.SET('mykey', 'myvalue');
-      console.log('set');
     }
   },
 } as ICommand;

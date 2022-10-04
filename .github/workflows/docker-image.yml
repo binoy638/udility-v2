@@ -19,6 +19,7 @@ jobs:
           LAVA_PASS: 'youshallnotpass'
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
           MONGO_URI: ${{ secrets.MONGO_URI }}
           PREFIX: '?'
         run: |
@@ -29,6 +30,7 @@ jobs:
           LAVA_PASS=$LAVA_PASS
           SPOTIFY_CLIENT_ID=$SPOTIFY_CLIENT_ID
           SPOTIFY_CLIENT_SECRET=$SPOTIFY_CLIENT_SECRET
+          JWT_SECRET=$JWT_SECRET
           PREFIX=$PREFIX
           MONGO_URI=$MONGO_URI
           EOF

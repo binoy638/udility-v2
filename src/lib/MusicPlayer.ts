@@ -3,6 +3,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Addable } from '@lavaclient/queue';
 import { SpotifyItemType } from '@lavaclient/spotify';
+import { CommandInteraction } from 'discord.js';
 
 import { ButtonEmojis } from '../@types';
 import logger from '../config/logger';
@@ -39,6 +40,9 @@ export class MusicPlayer extends CommandContext {
     let msg = '';
     if (this.client.music.spotify.isSpotifyUrl(query)) {
       logger.info('Spotify url found');
+      if (this.interaction && this.interaction instanceof CommandInteraction) {
+        this.interaction.deferReply();
+      }
       const item = await this.client.music.spotify.load(query);
       switch (item?.type) {
         case SpotifyItemType.Track:

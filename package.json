@@ -29,6 +29,7 @@
     "@types/dotenv-safe": "^8.1.2",
     "@types/glob": "^7.2.0",
     "@types/jest": "^26.0.24",
+    "@types/jsonwebtoken": "^8.5.9",
     "@types/node": "^16.4.12",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
@@ -63,11 +64,13 @@
     "discord.js": "^13.6.0",
     "dotenv": "^14.3.2",
     "fastest-levenshtein": "^1.0.12",
+    "jsonwebtoken": "^8.5.1",
     "lavaclient": "^4.1.1",
     "mongoose": "^6.4.6",
     "redis": "^4.0.4",
     "winston": "^3.6.0",
     "wokcommands": "^1.5.3",
-    "ytdl-core": "^4.11.2"
+    "ytdl-core": "^4.11.2",
+    "zod": "^3.19.1"
   }
 }
