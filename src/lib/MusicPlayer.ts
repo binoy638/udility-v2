@@ -42,6 +42,7 @@ export class MusicPlayer extends CommandContext {
       logger.info('Spotify url found');
       if (this.interaction && this.interaction instanceof CommandInteraction) {
         this.interaction.deferReply();
+        this.interaction.deleteReply();
       }
       const item = await this.client.music.spotify.load(query);
       switch (item?.type) {
@@ -264,8 +265,6 @@ export class MusicPlayer extends CommandContext {
       this.reply(Utils.embed("You're not in my voice channel."), { ephemeral: true });
       return;
     }
-
-    await this.reply(Utils.embed(`Left <#${player.channelId}>`));
 
     /* leave the player's voice channel. */
     player.disconnect();
