@@ -32,6 +32,8 @@ export const fetchAnimeQuery = `query($idMal: Int, $type: MediaType)  {
     }
     idMal
     updatedAt
+    genres
+    episodes
     nextAiringEpisode {
       airingAt
       timeUntilAiring

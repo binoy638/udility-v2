@@ -61,7 +61,7 @@ export interface AnimeData {
       mediaId: number;
     }[];
   };
-  status: string;
+  status: MediaStatus;
   description: string;
   startDate: {
     year: number;
@@ -81,5 +81,13 @@ export interface AnimeData {
   season: string;
   siteUrl: string;
   updatedAt: number;
-  nextAiringEpisode: number | null;
+  episodes: number | null;
+  nextAiringEpisode: {
+    airingAt: number;
+    timeUntilAiring: number;
+    episode: number;
+    mediaId: number;
+    id: number;
+  };
+  genres: string[];
 }

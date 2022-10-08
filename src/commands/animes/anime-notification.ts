@@ -1,13 +1,13 @@
-import jwt from 'jsonwebtoken';
 import { ICommand } from 'wokcommands';
 
+import { MediaStatus } from '../../@types';
 import logger from '../../config/logger';
 import { CommandContext, Utils } from '../../lib';
 import Anime from '../../lib/Anime';
 
 export default {
   category: 'Anime',
-  description: 'Get anime info',
+  description: 'Get notified when a new episode of an anime is released',
   slash: true,
   options: [
     {
@@ -29,17 +29,15 @@ export default {
         ctx.reply(Utils.embed({ title: '❌ Error', description: 'Anime not found' }));
         return;
       }
-      const url = `https://html-to-image-xi.vercel.app/?img=${data.coverImage.extraLarge}&name=${data.title.romaji}`;
-      const imageJWT = jwt.sign(
-        { url, type: 'png', clip: { x: 0, y: 0, height: 450, width: 300 } },
-        process.env.JWT_SECRET!
-      );
-
+      if (data.status !== MediaStatus.RELEASING) {
+        ctx.reply(Utils.embed({ title: '❌ Error', description: 'Anime is not currently airing' }));
+        return;
+      }
       ctx.reply(
         Utils.embed({
           title: `${data.title.romaji}`,
           url: data.siteUrl,
-          image: { url: `https://url-to-image-generator.vercel.app/api/image?data=${imageJWT}` },
+          image: { url: Anime.generateImageURL(data) },
         })
       );
     } catch (error) {
