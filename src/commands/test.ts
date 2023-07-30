@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { ICommand } from 'wokcommands';
 
-import Anime from '../lib/Anime';
-
 export default {
   category: 'Testing',
   description: 'test',
@@ -20,9 +18,9 @@ export default {
   callback: async ({ interaction }) => {
     const id = interaction?.options.getNumber('mal_id');
     if (id) {
-      const anime = new Anime(id);
-      const data = await anime.fetchAnime();
-      console.log(data);
+      // const anime = new Anime(id);
+      // const data = await anime.fetchAnime();
+      // console.log(data);
     }
   },
 } as ICommand;

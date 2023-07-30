@@ -2,6 +2,9 @@ export const fetchAnimeQuery = `query($idMal: Int, $type: MediaType)  {
   Media(idMal: $idMal, type: $type) {
     title {
       romaji
+      english
+      native
+      userPreferred
     }
     airingSchedule {
       nodes {

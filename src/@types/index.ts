@@ -51,6 +51,9 @@ export enum MediaStatus {
 export interface AnimeData {
   title: {
     romaji: string;
+    english: string;
+    native: string;
+    userPreferred: string;
   };
   airingSchedule: {
     nodes: {

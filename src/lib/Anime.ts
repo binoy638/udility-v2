@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-static-only-class */
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
 
@@ -12,15 +13,9 @@ const HTML_TO_IMAGE_API_URL = 'https://html-to-image-xi.vercel.app';
 const SCREENSHOT_API_URL = 'https://url-to-image-generator.vercel.app/api/image';
 
 class Anime {
-  private malID: number;
-
-  constructor(malID: number) {
-    this.malID = malID;
-  }
-
-  public async fetchAnime(): Promise<AnimeData> {
+  static async fetchAnime(malID: number): Promise<AnimeData> {
     const variables = {
-      idMal: this.malID,
+      idMal: malID,
       type: 'ANIME',
     };
     try {

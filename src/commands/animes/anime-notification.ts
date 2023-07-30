@@ -21,10 +21,8 @@ export default {
     const ctx = new CommandContext(interaction, message);
     const malID = interaction?.options.getNumber('mal_id') || Number(args[0]);
 
-    const anime = new Anime(malID);
-
     try {
-      const data = await anime.fetchAnime();
+      const data = await Anime.fetchAnime(malID);
       if (!data) {
         ctx.reply(Utils.embed({ title: '❌ Error', description: 'Anime not found' }));
         return;
