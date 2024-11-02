@@ -29,7 +29,7 @@ services:
       - LAVALINK_SERVER_PASSWORD=youshallnotpass
     volumes:
       # mount application.yml from the same directory or use environment variables
-      - ./application.yml:/opt/Lavalink/application.yml
+      - ./Lavalink/application.yml:/opt/Lavalink/application.yml
       # persist plugins between restarts, make sure to set the correct permissions (user: 322, group: 322)
       - ./plugins/:/opt/Lavalink/plugins/
     # networks:
